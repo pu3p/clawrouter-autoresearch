@@ -425,7 +425,10 @@ def classify_domain(question, choices):
     # Psychology-specific patterns
     if any(w in text for w in ["sleep", "rem ", "reinforcement schedule", "variable ratio",
                                 "classical conditioning", "operant conditioning",
-                                "side effects", "deprivation"]):
+                                "side effects", "deprivation",
+                                "brain damage", "hemisphere", "adhd",
+                                "hyperactivity", "stages of development",
+                                "capital punishment", "chat room"]):
         scores["social_sciences"] = scores.get("social_sciences", 0) + 3
     
     # Government/politics patterns
