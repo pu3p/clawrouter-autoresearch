@@ -112,3 +112,23 @@ bfe28c4	0.700523	0.700196	0.700849	keep	more professional_accounting tier signal
 25cf57b	0.702809	0.698890	0.706728	keep	sociology strong signals
 9143b71	0.703462	0.698236	0.708687	keep	econometrics keywords in social_sciences
 3db90b0	0.704768	0.697583	0.711953	keep	human_sexuality strong signals
+10028b3	0.704768	0.697583	0.711953	discard	unit detection (no change)
+1b5d46e	0.705095	0.698236	0.711953	keep	long humanities → REASONING
+c06b31f	0.704768	0.697583	0.711953	discard	long other → REASONING (slight drop)
+a9584ee	0.705095	0.696277	0.713912	discard	public_relations strong signals (tier dropped)
+c36fa89	0.706401	0.698236	0.714566	keep	ultra-strong keyword boost
+d94ab2a	0.709014	0.698236	0.719791	keep	expand ultra-strong keywords
+ef2581b	0.712606	0.701502	0.723710	keep	more ultra-strong keywords
+c19b8cd	0.711953	0.701502	0.722404	discard	ultra-strong 3x (slight drop)
+62a2c2d	0.711626	0.701502	0.721750	discard	more other ultra-strong (slight drop)
+e4f080c	0.711953	0.700196	0.723710	discard	more social_sciences ultra-strong (slight drop)
+b075ca8	0.712280	0.701502	0.723057	discard	negative signals (slight drop)
+ca79816	0.709993	0.696277	0.723710	discard	social_sciences MEDIUM 0.46 (worse)
+478b72c	0.720444	0.717178	0.723710	keep	COMPLEX threshold 0.65
+0c2e06b	0.722077	0.720444	0.723710	keep	COMPLEX threshold 0.70
+9fa8be7	0.722730	0.721750	0.723710	keep	COMPLEX threshold 0.75
+5bdcf51	0.724363	0.725016	0.723710	keep	COMPLEX threshold 0.80
+887ce2a	0.725669	0.727629	0.723710	keep	COMPLEX threshold 0.85
+2b1b982	0.725996	0.728282	0.723710	keep	COMPLEX threshold 0.90
+95809bc	0.726323	0.728935	0.723710	keep	COMPLEX threshold 0.95
+321431b	0.726323	0.728935	0.723710	discard	COMPLEX threshold 1.0 (no change)
