@@ -39,6 +39,11 @@ DOMAIN_KEYWORDS = {
         "logic", "fallacy", "argument", "premise", "conclusion", "valid",
         "religion", "theology", "sacred", "ritual", "belief", "faith",
         "literary", "narrative", "metaphor", "rhetoric",
+        "historical", "ancient", "medieval", "modern", "era", "period",
+        "treaty", "legislation", "judicial", "verdict", "plaintiff",
+        "ethical", "morality", "duty", "obligation", "conscience",
+        "philosophical", "epistemology", "metaphysics", "ontology",
+        "religious", "scripture", "doctrine", "spiritual", "divine",
     ],
     "social_sciences": [
         "economy", "GDP", "inflation", "unemployment", "fiscal", "monetary",
