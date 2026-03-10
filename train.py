@@ -214,7 +214,9 @@ SUBJECT_PATTERNS = {
     "professional_medicine_strong": {
         "tier": "REASONING",
         "signals": ["physical examination", "emergency department", "vital signs",
-                     "most appropriate next", "likely diagnosis", "mm hg"],
+                     "most appropriate next", "likely diagnosis", "mm hg",
+                     "pharmacotherapy", "diabetes mellitus", "prenatal",
+                     "paresthesia", "anterolateral", "hypertension"],
         "min_signals": 1,
     },
     # REASONING: professional accounting
