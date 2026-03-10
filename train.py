@@ -328,6 +328,16 @@ def score_request(question, choices):
     if tier is None:
         complexity = score_complexity(question, choices)
         tier = complexity_to_tier(complexity)
+        # Domain-aware tier adjustment: if domain suggests professional/college level
+        # but score is borderline, adjust
+        text = question.lower()
+        word_count = len(question.split())
+        # Short questions in social_sciences/stem with simple vocabulary → likely MEDIUM (high school)
+        if tier == "COMPLEX" and word_count < 20:
+            simple_starters = ["which of the following", "what is the", "what are the",
+                               "a change in", "an increase in", "a decrease in"]
+            if any(text.startswith(s) for s in simple_starters):
+                tier = "MEDIUM"
     return {"tier": tier, "domain": domain}
 
 
