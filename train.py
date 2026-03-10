@@ -616,6 +616,12 @@ def score_request(question, choices):
     # Medicine-detected REASONING → other domain
     if tier == "REASONING" and _detected_subject and "medicine" in _detected_subject:
         domain = "other"
+    # Moral scenarios → humanities domain
+    if _detected_subject and "moral_scenarios" in _detected_subject:
+        domain = "humanities"
+    # History-detected → humanities domain
+    if _detected_subject and "history" in _detected_subject:
+        domain = "humanities"
     return {"tier": tier, "domain": domain}
 
 
