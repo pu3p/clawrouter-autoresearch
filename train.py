@@ -300,6 +300,20 @@ SUBJECT_PATTERNS = {
                      "routine on-going", "k_e ="],
         "min_signals": 1,
     },
+    # MEDIUM: high_school_psychology
+    "high_school_psychology": {
+        "tier": "MEDIUM",
+        "signals": ["psychologist", "psychoanalytic", "psychotic",
+                     "psychoactive", "schizophrenia", "dissociative",
+                     "mnemonic", "teratogen", "newborn reflex",
+                     "autonomic nervous", "endocrine gland",
+                     "peek-a-boo", "object permanence",
+                     "humanistic perspective", "ap psychology",
+                     "secondary drives", "reinforcement",
+                     "classical conditioning", "operant conditioning",
+                     "sleep deprivation", "rem sleep"],
+        "min_signals": 2,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
@@ -653,8 +667,8 @@ def score_request(question, choices):
     # SIMPLE tier is always STEM (100% in dataset)
     if tier == "SIMPLE":
         domain = "stem"
-    # Psychology-detected REASONING → social_sciences domain
-    if tier == "REASONING" and _detected_subject and "psychology" in _detected_subject:
+    # Psychology-detected → social_sciences domain (both professional and high_school)
+    if _detected_subject and "psychology" in _detected_subject:
         domain = "social_sciences"
     # Law-detected REASONING → humanities domain
     if tier == "REASONING" and _detected_subject and "law" in _detected_subject:
