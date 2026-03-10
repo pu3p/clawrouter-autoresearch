@@ -275,10 +275,7 @@ def classify_domain(question, choices):
     # High-confidence domain indicators (weight 3x)
     strong_signals = {
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
-                 "wavelength", "velocity", "compiler", "eigenvalue",
-                 "photon", "neutron", "proton", "isotope", "chromosome",
-                 "polynomial", "vector", "matrix", "calculus",
-                 "circuit", "voltage", "binary", "recursion"],
+                 "wavelength", "velocity", "compiler", "eigenvalue"],
         "humanities": ["philosophy", "ethics", "constitution", "fallacy", "theology",
                        "legal", "court", "statute", "morally wrong", "defendant",
                        "archaeological", "prehistoric", "scripture"],
