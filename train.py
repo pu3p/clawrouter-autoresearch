@@ -137,7 +137,7 @@ def score_complexity(question, choices):
         score += 0.06
 
     # Comma count → sentence complexity
-    if question.count(",") >= 3:
+    if question.count(",") >= 2:
         score += 0.05
 
     # Semicolons → complex sentence structure
