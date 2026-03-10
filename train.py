@@ -294,9 +294,9 @@ def classify_domain(question, choices):
     
     for domain, keywords in DOMAIN_KEYWORDS.items():
         count = sum(1 for kw in keywords if kw.lower() in text)
-        # Triple weight for strong signals
+        # Quadruple weight for strong signals
         if domain in strong_signals:
-            count += 2 * sum(1 for kw in strong_signals[domain] if kw.lower() in text)
+            count += 3 * sum(1 for kw in strong_signals[domain] if kw.lower() in text)
         scores[domain] = count
     
     # Numeric answers → likely STEM
