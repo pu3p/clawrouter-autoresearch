@@ -189,7 +189,7 @@ SUBJECT_PATTERNS = {
                      "trespass", "burglary", "robbery", "assault",
                      "malpractice", "fiduciary", "escrow",
                      "entered into", "agreed to", "pursuant to"],
-        "min_signals": 1,
+        "min_signals": 2,
     },
     # REASONING: professional law (high-confidence single signals)
     "professional_law_strong": {
