@@ -25,6 +25,12 @@ DOMAIN_KEYWORDS = {
         "probability", "statistics", "regression", "hypothesis", "variance",
         "physics", "chemistry", "biology", "mathematics", "computer",
         "engineering", "astronomical", "orbit", "planet", "star",
+        "algebra", "geometry", "calculus", "trigonometry", "polynomial",
+        "vector", "scalar", "tensor", "eigenvalue", "determinant",
+        "quantum", "photon", "neutron", "proton", "isotope", "reaction",
+        "organism", "species", "evolution", "ecosystem", "chromosome",
+        "algorithm", "data structure", "runtime", "memory", "pointer",
+        "network", "protocol", "encryption", "hash", "database",
     ],
     "humanities": [
         "philosophy", "ethics", "moral", "justice", "rights", "virtue",
