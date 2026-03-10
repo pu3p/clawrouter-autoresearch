@@ -161,7 +161,7 @@ def score_complexity(question, choices):
     # Reasoning signals
     for pattern in COMPLEXITY_SIGNALS["reasoning"]:
         if re.search(pattern, text):
-            score += 0.10
+            score += 0.08
             break
 
     # Multi-step signals
