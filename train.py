@@ -129,6 +129,14 @@ def score_complexity(question, choices):
     if question.count("?") > 1:
         score += 0.08
 
+    # Parenthetical expressions → added context/complexity
+    if question.count("(") >= 2:
+        score += 0.06
+
+    # Comma count → sentence complexity
+    if question.count(",") >= 3:
+        score += 0.05
+
     # Reasoning signals
     for pattern in COMPLEXITY_SIGNALS["reasoning"]:
         if re.search(pattern, text):
