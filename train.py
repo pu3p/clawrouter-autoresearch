@@ -692,7 +692,11 @@ SUBJECT_PATTERNS = {
                      "radiates", "correspondence principle",
                      "rolling down", "deflected by",
                      "magnetic means", "gravitational",
-                     "projectile", "free fall", "wavelength"],
+                     "projectile", "free fall", "wavelength",
+                     "speed of light", "photon", "greenhouse gas",
+                     "standing waves", "fission or fusion",
+                     "apparent weight", "hologram",
+                     "radioactive nucleus", "planck"],
         "min_signals": 2,
     },
     # COMPLEX: conceptual_physics_strong
