@@ -222,7 +222,8 @@ SUBJECT_PATTERNS = {
         "signals": ["physical examination", "emergency department", "vital signs",
                      "most appropriate next", "likely diagnosis", "mm hg",
                      "pharmacotherapy", "diabetes mellitus", "prenatal",
-                     "paresthesia", "anterolateral", "hypertension"],
+                     "paresthesia", "anterolateral", "hypertension",
+                     "nares", "bloody nose"],
         "min_signals": 1,
     },
     # REASONING: professional accounting
