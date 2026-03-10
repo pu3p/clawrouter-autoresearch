@@ -321,15 +321,16 @@ SUBJECT_PATTERNS = {
         "signals": ["dietary fat", "bioavailability", "basal metabolic rate",
                      "lipoproteins", "vegan diet", "macrobiotic",
                      "anthropometric", "skeletal muscle tissue",
-                     "transamination", "amino acids", "bmr"],
+                     "transamination", "bmr", "nutrient", "nutritional"],
         "min_signals": 1,
     },
     # COMPLEX: virology
     "virology": {
         "tier": "COMPLEX",
         "signals": ["arenavirus", "cytotoxic t cell", "viruses",
-                     "viral", "retrovirus", "hiv-1", "influenza virus",
-                     "hepatitis", "herpes"],
+                     "retrovirus", "hiv-1", "influenza virus",
+                     "hepatitis", "herpes", "viral replication",
+                     "viral genome"],
         "min_signals": 1,
     },
     # COMPLEX: clinical_knowledge
