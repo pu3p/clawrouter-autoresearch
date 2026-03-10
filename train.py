@@ -360,7 +360,11 @@ SUBJECT_PATTERNS = {
                      "small intestine", "photosynthesis", "mitosis",
                      "meiosis", "dna replication", "allele",
                      "phenotype", "genotype", "ecosystem",
-                     "food chain", "cell membrane", "ribosome"],
+                     "food chain", "cell membrane", "ribosome",
+                     "earthworm", "spiracle", "alveoli",
+                     "hemophilia", "pancreas", "beta cells",
+                     "extraembryonic", "predator", "prey",
+                     "aquatic plant", "chloroplast", "xylem"],
         "min_signals": 2,
     },
     # MEDIUM: high_school_chemistry
@@ -407,6 +411,15 @@ SUBJECT_PATTERNS = {
     "moral_scenarios": {
         "tier": "COMPLEX",
         "signals": ["for which of these two scenarios does the main character"],
+        "min_signals": 1,
+    },
+    # COMPLEX: college_biology
+    "college_biology": {
+        "tier": "COMPLEX",
+        "signals": ["muscle contraction", "rna", "swimming sperm",
+                     "oligotrophic", "elastin", "stroma",
+                     "chloroplast", "gametophyte", "sporophyte",
+                     "tracheids", "xylem"],
         "min_signals": 1,
     },
     # COMPLEX: marketing
@@ -780,6 +793,9 @@ def score_request(question, choices):
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
     if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge"]):
         domain = "other"
+    # Biology-detected → stem domain
+    if _detected_subject and "biology" in _detected_subject:
+        domain = "stem"
     return {"tier": tier, "domain": domain}
 
 
