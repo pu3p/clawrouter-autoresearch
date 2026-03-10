@@ -402,19 +402,24 @@ def classify_domain(question, choices):
             count += 2 * sum(1 for kw in strong_signals[domain] if kw.lower() in text)
         scores[domain] = count
     
-    # Extra boost for very distinctive keywords (100% domain-specific)
+    # Extra boost for very distinctive keywords (>=80% domain-specific)
     ultra_strong = {
         "stem": ["wavelength", "binary", "orbit", "proton", "acceleration", "subgroup", "python", "gradient",
-                 "equation", "matrix", "software"],
+                 "equation", "matrix", "software", "molecule", "probability", "magnetic"],
         "humanities": ["statute", "fallacy", "premise", "ritual", "plaintiff", "morality", "doctrine",
                        "defendant", "prosecution", "attorney", "jurisdiction", "morally wrong",
                        "negligence", "felony", "testimony", "witness",
                        "moral", "argument", "obligation", "divine", "tribe",
-                       "jury", "peasant", "due process", "misdemeanor"],
+                       "jury", "peasant", "due process", "misdemeanor",
+                       "justice", "rights", "court", "legal", "empire",
+                       "faith", "religious", "trial", "appeal", "independence"],
         "social_sciences": ["psychologist", "aggregate demand", "money supply", "demand curve",
                             "fiscal", "recession", "conditioning", "aggregate supply",
-                            "price level", "supply curve", "marginal cost", "anxiety"],
-        "other": ["physical examination", "emergency department", "vital signs", "blood pressure"],
+                            "price level", "supply curve", "marginal cost", "anxiety",
+                            "GDP", "unemployment", "motivation", "reinforcement"],
+        "other": ["physical examination", "emergency department", "vital signs", "blood pressure",
+                  "vitamin", "diet", "viral", "muscle", "nerve", "artery",
+                  "glucose", "insulin", "plasma", "marketing"],
     }
     for domain, keywords in ultra_strong.items():
         count = sum(1 for kw in keywords if kw.lower() in text)
