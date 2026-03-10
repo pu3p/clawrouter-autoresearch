@@ -402,6 +402,19 @@ def classify_domain(question, choices):
             count += 2 * sum(1 for kw in strong_signals[domain] if kw.lower() in text)
         scores[domain] = count
     
+    # Extra boost for very distinctive keywords (100% domain-specific)
+    ultra_strong = {
+        "stem": ["wavelength", "binary", "orbit", "proton", "acceleration", "subgroup", "python", "gradient"],
+        "humanities": ["statute", "fallacy", "premise", "ritual", "plaintiff", "morality", "doctrine",
+                       "defendant", "prosecution", "attorney", "jurisdiction", "morally wrong",
+                       "negligence", "felony", "testimony", "witness"],
+        "social_sciences": ["psychologist", "aggregate demand", "money supply", "demand curve"],
+        "other": ["physical examination", "emergency department", "vital signs", "blood pressure"],
+    }
+    for domain, keywords in ultra_strong.items():
+        count = sum(1 for kw in keywords if kw.lower() in text)
+        scores[domain] = scores.get(domain, 0) + count * 2
+    
     # Numeric answers → likely STEM
     numeric_choices = sum(1 for c in choices if re.search(r'\d', c))
     if numeric_choices >= 3:
