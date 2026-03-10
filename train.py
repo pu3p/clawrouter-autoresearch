@@ -151,11 +151,18 @@ SUBJECT_PATTERNS = {
                      "warrant", "indictment", "felony", "misdemeanor",
                      "contract", "breach", "damages", "liable", "negligence",
                      "motion to", "objection", "sustained", "overruled",
-                     "convey", "deed", "easement", "tenant", "landlord",
-                     "executor", "probate", "heir", "bequest",
+                     "convey", "easement", "tenant", "landlord",
+                     "executor", "probate", "bequest",
                      "tort", "injunction", "subpoena", "arraignment",
-                     "guilty", "acquitted", "sentenced", "parole"],
+                     "guilty", "acquitted", "sentenced"],
         "min_signals": 2,
+    },
+    # REASONING: professional law (high-confidence single signals)
+    "professional_law_strong": {
+        "tier": "REASONING",
+        "signals": ["defendant", "attorney", "testimony", "felony",
+                     "negligence", "tenant", "prosecution", "plaintiff"],
+        "min_signals": 1,
     },
     # REASONING: professional medicine
     "professional_medicine": {
