@@ -248,7 +248,8 @@ SUBJECT_PATTERNS = {
                      "financial statements", "income statement", "classified statement",
                      "divorce settlement", "risk-averse", "face value",
                      "cost of debt", "uncollectible", "ordinary income",
-                     "levied", "coupon", "property tax"],
+                     "levied", "coupon", "property tax",
+                     "routine on-going", "k_e ="],
         "min_signals": 1,
     },
     # REASONING: professional psychology
