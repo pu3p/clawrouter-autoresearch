@@ -211,3 +211,9 @@ dc453f7	0.798824	0.817113	0.780536	keep	increase hs_physics min_signals to 3
 7e73bf2	0.798824	0.817113	0.780536	revert	reverted biology changes
 8ff7e43	0.799151	0.817766	0.780536	keep	expand hs_biology signals safely
 c8ef20c	0.801110	0.819073	0.783148	keep	sociology + security_studies detection + domain override
+a76566a	0.801437	0.819073	0.783801	keep	prehistory/world_religions/philosophy detection + humanities override
+b7993b1	0.801764	0.819073	0.784455	keep	conceptual_physics/astronomy/computer_security detection + stem override
+e02e0ec	0.804703	0.819073	0.790333	keep	business_ethics/medical_genetics detection + other override
+dbfce87	0.806009	0.820379	0.791639	keep	anatomy/management detection + other override
+7e0c8d4	0.807315	0.822992	0.791639	keep	expand hs_psychology signals
+0157d82	0.811234	0.828217	0.794252	keep	hs_psychology_strong unique phrases
