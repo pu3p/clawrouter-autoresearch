@@ -198,3 +198,7 @@ c5268b8	0.772371	0.797518	0.747224	keep	psychology→social_sciences domain over
 482ec5f	0.786414	0.798171	0.774657	keep	more psychology patterns
 5e9ff8d	0.787067	0.798171	0.775963	keep	more government patterns
 6276c03	0.787720	0.798171	0.777270	keep	more medical patterns for other
+4290f60	0.788047	0.798171	0.777923	keep	subject detection marketing/nutrition/virology/clinical_knowledge
+9becf66	0.788047	0.798171	0.777923	keep	fix virology/nutrition false positives
+bf3cd66	0.788047	0.798171	0.777923	keep	expand psychology domain patterns
+a457bce	0.790007	0.800784	0.779229	keep	high_school_psychology subject detection + domain override
