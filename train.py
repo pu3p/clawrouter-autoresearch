@@ -508,6 +508,25 @@ SUBJECT_PATTERNS = {
                      "heritability", "base pairs"],
         "min_signals": 1,
     },
+    # COMPLEX: anatomy
+    "anatomy": {
+        "tier": "COMPLEX",
+        "signals": ["parotid gland", "intercostal space",
+                     "maxillary sinus", "connective tissue",
+                     "tonsillar", "homeostasis",
+                     "stethoscope", "mid-axillary",
+                     "flexor", "extensor", "ligament"],
+        "min_signals": 1,
+    },
+    # COMPLEX: management
+    "management": {
+        "tier": "COMPLEX",
+        "signals": ["decision making model", "corporate manager",
+                     "bureaucratic organisation", "power distance",
+                     "key skill of management", "authority refer",
+                     "organisational", "leadership style"],
+        "min_signals": 1,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
@@ -886,7 +905,7 @@ def score_request(question, choices):
     if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies"]):
         domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
-    if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics"]):
+    if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics", "anatomy", "management"]):
         domain = "other"
     # Physics/astronomy/computer_security → stem domain
     if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security"]):
