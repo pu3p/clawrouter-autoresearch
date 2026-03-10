@@ -125,6 +125,8 @@ DOMAIN_KEYWORDS = {
         "debit", "credit", "ledger", "journal entry",
         "serum", "plasma", "biopsy", "lesion", "tumor",
         "antigen", "antibody", "lymphocyte", "macrophage",
+        "somatic", "dose", "creatine", "meniscus",
+        "global facts", "percentage of", "billion",
     ],
 }
 
