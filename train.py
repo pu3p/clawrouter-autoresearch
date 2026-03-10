@@ -462,7 +462,9 @@ def classify_domain(question, choices):
                             "trade deficit", "inflation rate", "interest rate"],
         "other": ["physical examination", "emergency department", "vital signs", "blood pressure",
                   "vitamin", "diet", "viral", "muscle", "nerve", "artery",
-                  "glucose", "insulin", "plasma", "marketing"],
+                  "glucose", "insulin", "plasma", "marketing",
+                  "patient", "diagnosis", "physician", "infection",
+                  "audit", "depreciation", "carbohydrate"],
     }
     for domain, keywords in ultra_strong.items():
         count = sum(1 for kw in keywords if kw.lower() in text)
