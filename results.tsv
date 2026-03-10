@@ -132,3 +132,39 @@ ca79816	0.709993	0.696277	0.723710	discard	social_sciences MEDIUM 0.46 (worse)
 2b1b982	0.725996	0.728282	0.723710	keep	COMPLEX threshold 0.90
 95809bc	0.726323	0.728935	0.723710	keep	COMPLEX threshold 0.95
 321431b	0.726323	0.728935	0.723710	discard	COMPLEX threshold 1.0 (no change)
+c1e101e	0.728609	0.733508	0.723710	keep	MEDIUM threshold 0.30
+d65a960	0.728609	0.733508	0.723710	discard	MEDIUM threshold 0.25 (no change)
+23bd1b5	0.726323	0.728935	0.723710	discard	baseline 0.32 (worse)
+9a25cea	0.728935	0.733508	0.724363	keep	psychology/government pattern detection
+a0b4bcc	0.729589	0.733508	0.725669	keep	economics pattern detection
+5a87207	0.000000	0.000000	0.000000	discard	STEM patterns (syntax error)
+c580d62	0.729589	0.733508	0.725669	keep	fix line merge + STEM patterns
+961278f	0.729589	0.733508	0.725669	keep	medical case pattern detection
+9165a68	0.729589	0.733508	0.725669	discard	SIMPLE threshold 0.20 (no change)
+a0baf5b	0.726323	0.726976	0.725669	discard	social_sciences MEDIUM 0.50 (worse)
+91a84a1	0.729589	0.733508	0.725669	keep	formal logic patterns
+4927e4a	0.730895	0.733508	0.728282	keep	more social_sciences ultra-strong keywords
+0a4ec08	0.730242	0.733508	0.726976	discard	remove cross-polluting keywords (worse)
+4de21ba	0.729915	0.732854	0.726976	discard	more other ultra-strong keywords (worse)
+6186e2f	0.730895	0.733508	0.728282	keep	safe other ultra-strong keywords
+1a43953	0.730895	0.733508	0.728282	keep	STEM ultra-strong keywords
+6e9b257	0.725016	0.732201	0.717831	discard	humanities ultra-strong (king, war too noisy)
+b02409a	0.730568	0.733508	0.727629	discard	safe humanities ultra-strong (slightly worse)
+ac5f189	0.737100	0.745918	0.728282	keep	expand professional_psychology_strong signals
+67c4ef5	0.740366	0.752449	0.728282	keep	professional_accounting_strong signals
+3131d61	0.741672	0.755062	0.728282	keep	expand professional_medicine_strong signals
+5ca249b	0.742325	0.756368	0.728282	keep	expand professional_law_strong signals
+da348c2	0.746897	0.765513	0.728282	keep	more professional_psychology_strong signals
+34b3a1a	0.748857	0.769432	0.728282	keep	more professional_accounting_strong signals
+ee38e86	0.749510	0.770738	0.728282	keep	more professional_law_strong signals
+bcfcfe2	0.749184	0.770738	0.727629	discard	biology STEM keywords (dna hurts)
+1e0ec2f	0.749510	0.770738	0.728282	keep	safe biology STEM keywords
+937ad36	0.749510	0.770738	0.728282	keep	tissue and physician other keywords
+28afca4	0.749184	0.770738	0.727629	discard	blood other keyword (worse)
+76e343b	0.749184	0.772044	0.726323	discard	remove noisy keywords (domain worse)
+3b6bab8	0.748204	0.771391	0.725016	discard	remove harmful keywords (worse)
+966eefd	0.746571	0.770085	0.723057	discard	ultra-strong 3x (worse)
+23c26ca	0.749837	0.771391	0.728282	keep	fix unicode apostrophe + cohen's d
+a73dbde	0.749837	0.771391	0.728282	keep	normalize unicode in classify_domain
+6f1f438	0.749837	0.771391	0.728282	keep	force SIMPLE→STEM domain
+b03bef3	0.751470	0.771391	0.731548	keep	more other strong signals (crossed 0.75!)
