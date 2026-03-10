@@ -114,11 +114,11 @@ def score_complexity(question, choices):
 
     # Length signal
     word_count = len(question.split())
-    if word_count > 35:
+    if word_count > 33:
         score += 0.18
-    elif word_count > 22:
+    elif word_count > 20:
         score += 0.12
-    elif word_count > 12:
+    elif word_count > 10:
         score += 0.06
 
     # Choice complexity
