@@ -318,6 +318,13 @@ def detect_tier_from_subject(question, choices):
     for subj, config in SUBJECT_PATTERNS.items():
         matches = sum(1 for s in config["signals"] if s in all_text)
         if matches >= config["min_signals"]:
+            # Avoid misclassifying high_school_ questions as REASONING
+            if config["tier"] == "REASONING":
+                hs_indicators = ["school psychologist", "stimulant",
+                                 "unconditional positive regard",
+                                 "legislative oversight"]
+                if any(ind in all_text for ind in hs_indicators):
+                    continue
             return config["tier"]
     return None
 
