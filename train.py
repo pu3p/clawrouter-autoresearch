@@ -219,7 +219,9 @@ SUBJECT_PATTERNS = {
                      "financial statement", "balance sheet", "revenue recognition",
                      "accounts receivable", "accounts payable", "amortization",
                      "taxable", "gross income", "net income", "cash flow",
-                     "inventory", "goodwill"],
+                     "inventory", "goodwill",
+                     "internal controls", "revenue cycle", "issuer",
+                     "board of directors", "net cash", "basis"],
         "min_signals": 2,
     },
     # REASONING: professional psychology
