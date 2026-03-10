@@ -271,7 +271,7 @@ def detect_tier_from_subject(question, choices):
 
 def score_complexity(question, choices):
     """Score question complexity from 0.0 to 1.0."""
-    score = 0.32  # baseline: most MMLU questions are COMPLEX
+    score = 0.3  # baseline: most MMLU questions are COMPLEX
     text = question.lower()
     all_text = text + " " + " ".join(c.lower() for c in choices)
 
