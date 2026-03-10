@@ -83,6 +83,7 @@ Write a report to /workspace/results/classifier_report.md with:
 - Do NOT commit large binary files (.pt, .bin, .safetensors, .arrow) — they are gitignored.
 - **CRITICAL: After completing each step**, commit to git:
   ```
-  cd ~/sky_workdir && cp -r /workspace/simply/scripts/* scripts/ 2>/dev/null; cp /workspace/results/*.json /workspace/results/*.md results/ 2>/dev/null; git add -A && git commit -m "step N: description" && git push clawrouter mar10-ec2
+  cd ~/sky_workdir && git add -A && git commit -m "step N: description" && git push clawrouter mar10-ec2
   ```
-- Steps 1-2 are already done. Data is at /workspace/results/mmlu_processed/. Domain labels at /workspace/results/domain_labels.json. Resume from Step 3.
+- All scripts go in ~/sky_workdir/scripts/ and all results in ~/sky_workdir/results/. Work directly in ~/sky_workdir.
+- Scripts from prior runs are in ~/sky_workdir/scripts/. If data outputs don't exist yet, re-run the existing scripts first before continuing to later steps.

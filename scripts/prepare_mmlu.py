@@ -1,15 +1,19 @@
-"""Prepare MMLU dataset for domain+complexity classifier training."""
+"""Prepare MMLU dataset for domain+complexity classifier training.
+
+auxiliary_train has no subject labels, so we split the labeled test+validation
+data into train/val/test (80/10/10).
+"""
 
 import json
 import os
-from datasets import load_dataset, DatasetDict
+import datasets
+from datasets import load_dataset, DatasetDict, concatenate_datasets
 
 RESULTS_DIR = "/workspace/results"
 OUTPUT_DIR = os.path.join(RESULTS_DIR, "mmlu_processed")
 
 
 def format_prompt(example):
-    """Combine question + choices into a natural prompt."""
     choices = example["choices"]
     letters = ["A", "B", "C", "D"]
     choice_str = "\n".join(
@@ -24,21 +28,24 @@ def main():
     print("Loading MMLU dataset...")
     ds = load_dataset("cais/mmlu", "all")
 
-    # Get all 57 subjects
+    # Combine all labeled splits (test + validation + dev)
+    labeled = concatenate_datasets([
+        ds["test"], ds["validation"], ds["dev"]
+    ])
+    print(f"Total labeled examples: {len(labeled)}")
+
+    # Get 57 real subjects (exclude empty)
     all_subjects = sorted(
-        set(ds["test"]["subject"])
-        | set(ds["validation"]["subject"])
-        | set(ds["auxiliary_train"]["subject"])
+        s for s in set(labeled["subject"]) if s
     )
     print(f"Found {len(all_subjects)} subjects")
 
-    # Save domain labels
     os.makedirs(RESULTS_DIR, exist_ok=True)
-    with open(os.path.join(RESULTS_DIR, "domain_labels.json"), "w") as f:
+    with open(
+        os.path.join(RESULTS_DIR, "domain_labels.json"), "w"
+    ) as f:
         json.dump(all_subjects, f, indent=2)
-    print(f"Saved {len(all_subjects)} domain labels")
 
-    # Build label maps
     domain2id = {s: i for i, s in enumerate(all_subjects)}
 
     def process(example):
@@ -46,21 +53,43 @@ def main():
         example["domain_id"] = domain2id[example["domain"]]
         return example
 
-    # Use auxiliary_train as train, validation as val, test as test
-    splits = DatasetDict({
-        "train": ds["auxiliary_train"].map(process),
-        "validation": ds["validation"].map(process),
-        "test": ds["test"].map(process),
-    })
+    labeled = labeled.map(process)
 
-    # Keep only needed columns
     keep_cols = ["text", "domain", "domain_id"]
-    for split_name in splits:
-        drop = [
-            c for c in splits[split_name].column_names
-            if c not in keep_cols
-        ]
-        splits[split_name] = splits[split_name].remove_columns(drop)
+    drop = [
+        c for c in labeled.column_names if c not in keep_cols
+    ]
+    labeled = labeled.remove_columns(drop)
+
+    # Stratified split: 80/10/10
+    from datasets import ClassLabel
+    labeled = labeled.cast_column(
+        "domain_id",
+        ClassLabel(num_classes=len(all_subjects))
+    )
+    split1 = labeled.train_test_split(
+        test_size=0.2, seed=42,
+        stratify_by_column="domain_id"
+    )
+    split2 = split1["test"].train_test_split(
+        test_size=0.5, seed=42,
+        stratify_by_column="domain_id"
+    )
+    # Cast back to int
+    for k in ["train"]:
+        split1[k] = split1[k].cast_column(
+            "domain_id", datasets.Value("int64")
+        )
+    for k in ["train", "test"]:
+        split2[k] = split2[k].cast_column(
+            "domain_id", datasets.Value("int64")
+        )
+
+    splits = DatasetDict({
+        "train": split1["train"],
+        "validation": split2["train"],
+        "test": split2["test"],
+    })
 
     for name, split in splits.items():
         print(f"{name}: {len(split)} examples")
