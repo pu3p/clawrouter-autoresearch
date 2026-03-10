@@ -382,6 +382,12 @@ def classify_domain(question, choices):
                                 "molar mass", "free body"]):
         scores["stem"] = scores.get("stem", 0) + 3
     
+    # Medical case patterns → other
+    if any(w in text for w in ["comes to the office", "brought to the emergency",
+                                "is referred to", "presents to the",
+                                "history of present illness", "past medical history"]):
+        scores["other"] = scores.get("other", 0) + 3
+    
     # High-confidence domain indicators (weight 3x)
     strong_signals = {
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
