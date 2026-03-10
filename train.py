@@ -397,6 +397,10 @@ def classify_domain(question, choices):
     if any("True, True" in c for c in choices) and any("False, False" in c for c in choices):
         scores["stem"] = scores.get("stem", 0) + 3
     
+    # "Statement 1 |" pattern → likely STEM
+    if "statement 1" in text and "statement 2" in text:
+        scores["stem"] = scores.get("stem", 0) + 2
+    
     if max(scores.values()) == 0:
         return "other"
     return max(scores, key=scores.get)
