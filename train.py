@@ -67,6 +67,13 @@ DOMAIN_KEYWORDS = {
         "business", "management", "marketing", "accounting", "audit",
         "nutrition", "vitamin", "diet", "calorie", "protein",
         "aging", "elderly", "genetic", "mutation", "virus", "infection",
+        "medical", "physician", "hospital", "healthcare", "prescription",
+        "syndrome", "pathology", "epidemiology", "immunology", "pharmacology",
+        "corporate", "entrepreneur", "revenue", "expense", "asset", "liability",
+        "finance", "investment", "stock", "bond", "portfolio", "dividend",
+        "nutrient", "mineral", "carbohydrate", "metabolism", "dietary",
+        "geriatric", "longevity", "senescence", "lifespan",
+        "viral", "bacterial", "contagious", "pandemic", "vaccine",
     ],
 }
 
