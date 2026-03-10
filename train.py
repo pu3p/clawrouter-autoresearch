@@ -355,6 +355,20 @@ def classify_domain(question, choices):
     text = (question + " " + " ".join(choices)).lower()
     scores = {}
     
+    # Question pattern detection
+    # "Which of the following statements about X" → check X for domain
+    # Psychology-specific patterns
+    if any(w in text for w in ["sleep", "rem ", "reinforcement schedule", "variable ratio",
+                                "classical conditioning", "operant conditioning",
+                                "side effects", "deprivation"]):
+        scores["social_sciences"] = scores.get("social_sciences", 0) + 3
+    
+    # Government/politics patterns
+    if any(w in text for w in ["interest groups", "federal court", "federal state",
+                                "political party", "electoral", "incumbent",
+                                "filibuster", "gerrymandering"]):
+        scores["social_sciences"] = scores.get("social_sciences", 0) + 3
+    
     # High-confidence domain indicators (weight 3x)
     strong_signals = {
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
