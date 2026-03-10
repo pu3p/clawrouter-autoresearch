@@ -372,10 +372,7 @@ def classify_domain(question, choices):
                   "marketing", "customer", "brand",
                   "physical examination", "emergency department", "vital signs",
                   "blood pressure", "likely diagnosis", "most appropriate",
-                  "common stock", "older adults",
-                  "serum", "plasma", "biopsy", "lesion",
-                  "antigen", "antibody", "lymphocyte",
-                  "depreciation", "amortization", "receivable"],
+                  "common stock", "older adults"],
     }
     
     for domain, keywords in DOMAIN_KEYWORDS.items():
