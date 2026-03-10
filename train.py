@@ -384,6 +384,16 @@ SUBJECT_PATTERNS = {
                      "aquatic plant", "chloroplast", "xylem"],
         "min_signals": 2,
     },
+    # MEDIUM: high_school_biology_strong — unique phrases
+    "high_school_biology_strong": {
+        "tier": "MEDIUM",
+        "signals": ["dna content", "metaphase i", "these organisms",
+                     "secretion will", "two nucleotides",
+                     "descent with modification", "hardy-weinberg equilibrium",
+                     "while prokaryotes", "glucose levels will",
+                     "gene alleles"],
+        "min_signals": 1,
+    },
     # MEDIUM: high_school_chemistry
     "high_school_chemistry": {
         "tier": "MEDIUM",
