@@ -95,6 +95,9 @@ DOMAIN_KEYWORDS = {
         "iq", "intelligence", "aptitude", "achievement test",
         "approach-avoidance", "conflict resolution",
         "stakeholder", "public opinion", "propaganda",
+        "security", "terrorism", "nuclear", "deterrence", "proliferation",
+        "humanitarian", "refugee", "asylum", "genocide",
+        "voter", "ballot", "campaign", "partisan", "lobby",
     ],
     "other": [
         "patient", "diagnosis", "treatment", "symptom", "disease", "clinical",
