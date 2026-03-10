@@ -455,6 +455,12 @@ def classify_domain(question, choices):
                                 "history of present illness", "past medical history"]):
         scores["other"] = scores.get("other", 0) + 3
     
+    # Accounting/business patterns → other
+    if any(w in text for w in ["net cash benefit", "terminal benefit",
+                                "fair market value", "joint basis",
+                                "proposed project", "annual net"]):
+        scores["other"] = scores.get("other", 0) + 3
+    
     # High-confidence domain indicators (weight 3x)
     strong_signals = {
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
