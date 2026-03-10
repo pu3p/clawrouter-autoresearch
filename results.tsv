@@ -195,3 +195,6 @@ c5268b8	0.772371	0.797518	0.747224	keep	psychology→social_sciences domain over
 1e9b44a	0.783475	0.797518	0.769432	keep	moral_scenarios/history domain overrides
 1fcf014	0.784128	0.797518	0.770738	keep	reorder psychology before medicine
 8441d28	0.785108	0.797518	0.772698	keep	remove noisy elementary signals
+482ec5f	0.786414	0.798171	0.774657	keep	more psychology patterns
+5e9ff8d	0.787067	0.798171	0.775963	keep	more government patterns
+6276c03	0.787720	0.798171	0.777270	keep	more medical patterns for other
