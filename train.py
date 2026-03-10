@@ -548,7 +548,8 @@ SUBJECT_PATTERNS = {
                      "deaconess", "christianity", "buddhism",
                      "hinduism", "islam", "judaism",
                      "torah", "quran", "vedas",
-                     "mosque", "synagogue", "monastery"],
+                     "mosque", "synagogue", "monastery",
+                     "festival of"],
         "min_signals": 2,
     },
     # COMPLEX: philosophy
@@ -626,6 +627,22 @@ SUBJECT_PATTERNS = {
         "signals": ["consistent. consistent valuation",
                      "consistent valuation when",
                      "are true and"],
+        "min_signals": 1,
+    },
+    # COMPLEX: jurisprudence
+    "jurisprudence": {
+        "tier": "COMPLEX",
+        "signals": ["which proposition below", "most powerful refutation",
+                     "the law."],
+        "min_signals": 1,
+    },
+    # COMPLEX: human_aging
+    "human_aging": {
+        "tier": "COMPLEX",
+        "signals": ["telomere strands", "a bigger role",
+                     "gay and lesbian couples",
+                     "satisfied with their", "cancer cells",
+                     "normal cells"],
         "min_signals": 1,
     },
     # COMPLEX: abstract_algebra
@@ -1102,7 +1119,7 @@ def score_request(question, choices):
     if _detected_subject and "history" in _detected_subject:
         domain = "humanities"
     # Prehistory/world_religions/philosophy/moral_disputes → humanities domain
-    if _detected_subject and any(s in _detected_subject for s in ["prehistory", "world_religions", "philosophy", "moral_disputes", "international_law", "logical_fallacies", "formal_logic"]):
+    if _detected_subject and any(s in _detected_subject for s in ["prehistory", "world_religions", "philosophy", "moral_disputes", "international_law", "logical_fallacies", "formal_logic", "jurisprudence"]):
         domain = "humanities"
     # Human_sexuality → social_sciences domain
     if _detected_subject and "human_sexuality" in _detected_subject:
@@ -1111,7 +1128,7 @@ def score_request(question, choices):
     if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies", "econometrics", "public_relations", "human_sexuality", "us_foreign_policy"]):
         domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
-    if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics", "anatomy", "management", "college_medicine"]):
+    if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics", "anatomy", "management", "college_medicine", "human_aging"]):
         domain = "other"
     # Physics/astronomy/computer_security/college_computer_science → stem domain
     if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security", "college_computer_science", "abstract_algebra", "machine_learning", "electrical_engineering"]):
