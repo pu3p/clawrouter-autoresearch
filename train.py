@@ -610,6 +610,20 @@ SUBJECT_PATTERNS = {
                      "phishing", "denial of service"],
         "min_signals": 1,
     },
+    # COMPLEX: college_computer_science
+    "college_computer_science": {
+        "tier": "COMPLEX",
+        "signals": ["operating system", "network operating",
+                     "distributed operating"],
+        "min_signals": 1,
+    },
+    # COMPLEX: college_medicine
+    "college_medicine": {
+        "tier": "COMPLEX",
+        "signals": ["graduated cylinder", "adhesive forces",
+                     "fibres. type", "the mercury"],
+        "min_signals": 1,
+    },
     # COMPLEX: business_ethics
     "business_ethics": {
         "tier": "COMPLEX",
@@ -1030,10 +1044,10 @@ def score_request(question, choices):
     if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies"]):
         domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
-    if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics", "anatomy", "management"]):
+    if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics", "anatomy", "management", "college_medicine"]):
         domain = "other"
-    # Physics/astronomy/computer_security → stem domain
-    if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security"]):
+    # Physics/astronomy/computer_security/college_computer_science → stem domain
+    if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security", "college_computer_science"]):
         domain = "stem"
     return {"tier": tier, "domain": domain}
 
