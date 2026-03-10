@@ -142,10 +142,6 @@ def score_complexity(question, choices):
     if "all of the above" in choices_text or "none of the above" in choices_text:
         score += 0.10
 
-    # Colons → definitions/explanations
-    if question.count(":") >= 1:
-        score += 0.04
-
     # Reasoning signals
     for pattern in COMPLEXITY_SIGNALS["reasoning"]:
         if re.search(pattern, text):
