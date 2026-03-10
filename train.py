@@ -306,6 +306,40 @@ SUBJECT_PATTERNS = {
         "signals": ["for which of these two scenarios does the main character"],
         "min_signals": 1,
     },
+    # COMPLEX: marketing
+    "marketing": {
+        "tier": "COMPLEX",
+        "signals": ["marketing communications", "segmentation", "consumer segmentation",
+                     "marketing mix", "marketing researcher", "marketing information",
+                     "supply chain management", "merchandise lines",
+                     "brand positioning", "salespeople"],
+        "min_signals": 1,
+    },
+    # COMPLEX: nutrition
+    "nutrition": {
+        "tier": "COMPLEX",
+        "signals": ["dietary fat", "bioavailability", "basal metabolic rate",
+                     "lipoproteins", "vegan diet", "macrobiotic",
+                     "anthropometric", "skeletal muscle tissue",
+                     "transamination", "amino acids", "bmr"],
+        "min_signals": 1,
+    },
+    # COMPLEX: virology
+    "virology": {
+        "tier": "COMPLEX",
+        "signals": ["arenavirus", "cytotoxic t cell", "viruses",
+                     "viral", "retrovirus", "hiv-1", "influenza virus",
+                     "hepatitis", "herpes"],
+        "min_signals": 1,
+    },
+    # COMPLEX: clinical_knowledge
+    "clinical_knowledge": {
+        "tier": "COMPLEX",
+        "signals": ["muscle fibres", "peak flow", "cushing",
+                     "post-operative", "asthma", "blood pressure",
+                     "pulse rate", "nursing", "clinical assessment"],
+        "min_signals": 1,
+    },
 }
 
 
@@ -629,6 +663,9 @@ def score_request(question, choices):
     # History-detected → humanities domain
     if _detected_subject and "history" in _detected_subject:
         domain = "humanities"
+    # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
+    if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge"]):
+        domain = "other"
     return {"tier": tier, "domain": domain}
 
 
