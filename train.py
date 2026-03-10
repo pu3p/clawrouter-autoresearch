@@ -607,6 +607,15 @@ def score_request(question, choices):
     # Psychology-detected REASONING → social_sciences domain
     if tier == "REASONING" and _detected_subject and "psychology" in _detected_subject:
         domain = "social_sciences"
+    # Law-detected REASONING → humanities domain
+    if tier == "REASONING" and _detected_subject and "law" in _detected_subject:
+        domain = "humanities"
+    # Accounting-detected REASONING → other domain
+    if tier == "REASONING" and _detected_subject and "accounting" in _detected_subject:
+        domain = "other"
+    # Medicine-detected REASONING → other domain
+    if tier == "REASONING" and _detected_subject and "medicine" in _detected_subject:
+        domain = "other"
     return {"tier": tier, "domain": domain}
 
 
