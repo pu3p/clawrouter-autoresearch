@@ -179,7 +179,9 @@ SUBJECT_PATTERNS = {
                      "rule for the", "situation can be solved",
                      "days in a week", "volunteering", "librarian",
                      "estimate the product", "purchased their lunch",
-                     "inequality"],
+                     "inequality",
+                     "50% of a number", "votes in favor", "value of |",
+                     "what is x if", "pennies", "grams of magnesium"],
         "min_signals": 1,
     },
     # MEDIUM: high school history — very long passages with "This question refers to"
