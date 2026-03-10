@@ -314,6 +314,20 @@ SUBJECT_PATTERNS = {
                      "sleep deprivation", "rem sleep"],
         "min_signals": 2,
     },
+    # MEDIUM: high_school_government_and_politics
+    "high_school_government": {
+        "tier": "MEDIUM",
+        "signals": ["congressional committee", "interest groups",
+                     "entitlement program", "federal election",
+                     "legislative oversight", "federal budget",
+                     "federal court", "supreme court",
+                     "unfunded mandate", "first amendment",
+                     "house of representatives", "senate",
+                     "political action committee", "pac donation",
+                     "secretary of state", "federalism",
+                     "separation of church", "majority party"],
+        "min_signals": 2,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
@@ -685,6 +699,9 @@ def score_request(question, choices):
     # History-detected → humanities domain
     if _detected_subject and "history" in _detected_subject:
         domain = "humanities"
+    # Government-detected → social_sciences domain
+    if _detected_subject and "government" in _detected_subject:
+        domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
     if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge"]):
         domain = "other"
