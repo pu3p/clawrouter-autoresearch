@@ -500,7 +500,7 @@ def classify_domain(question, choices):
         "other": ["physical examination", "emergency department", "vital signs", "blood pressure",
                   "vitamin", "diet", "viral", "muscle", "nerve", "artery",
                   "glucose", "insulin", "plasma", "marketing",
-                  "diagnosis", "infection", "audit", "tissue", "physician", "blood"],
+                  "diagnosis", "infection", "audit", "tissue", "physician"],
     }
     for domain, keywords in ultra_strong.items():
         count = sum(1 for kw in keywords if kw.lower() in text)
