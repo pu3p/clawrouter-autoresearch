@@ -217,3 +217,8 @@ e02e0ec	0.804703	0.819073	0.790333	keep	business_ethics/medical_genetics detecti
 dbfce87	0.806009	0.820379	0.791639	keep	anatomy/management detection + other override
 7e0c8d4	0.807315	0.822992	0.791639	keep	expand hs_psychology signals
 0157d82	0.811234	0.828217	0.794252	keep	hs_psychology_strong unique phrases
+9a297a6	0.815153	0.836055	0.794252	keep	hs_mathematics_strong unique phrases
+5d77364	0.818746	0.842587	0.794905	keep	hs_biology_strong unique phrases
+448f497	0.822665	0.850425	0.794905	keep	strong patterns for hs_chem/macro/stats/cs
+b2962d2	0.827237	0.857609	0.796865	keep	strong patterns for hs_micro/gov/physics
+a1f2913	0.829523	0.857609	0.801437	keep	strong patterns for prehistory/philosophy/moral_disputes/human_sexuality
