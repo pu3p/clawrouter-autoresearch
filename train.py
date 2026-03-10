@@ -229,6 +229,17 @@ SUBJECT_PATTERNS = {
                      "board of directors", "net cash", "basis"],
         "min_signals": 2,
     },
+    # REASONING: professional accounting (high-confidence single signals)
+    "professional_accounting_strong": {
+        "tier": "REASONING",
+        "signals": ["coso", "auditor", "sale-leaseback", "postretirement",
+                     "not-for-profit", "activity-based costing", "misappropriation",
+                     "material misstatement", "defined benefit", "convertible bond",
+                     "overfunded", "nongovernmental", "equity method",
+                     "accrual", "conversion ratio", "par value",
+                     "financial statements", "income statement", "classified statement"],
+        "min_signals": 1,
+    },
     # REASONING: professional psychology
     "professional_psychology": {
         "tier": "REASONING",
