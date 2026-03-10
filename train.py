@@ -436,7 +436,10 @@ def classify_domain(question, choices):
                                 "political party", "electoral", "incumbent",
                                 "filibuster", "gerrymandering",
                                 "free speech", "first amendment", "separation of church",
-                                "court decision", "court system"]):
+                                "court decision", "court system",
+                                "death penalty", "federal structure",
+                                "national and state governments",
+                                "congress's power", "national policy"]):
         scores["social_sciences"] = scores.get("social_sciences", 0) + 3
     
     
