@@ -414,6 +414,12 @@ def classify_domain(question, choices):
                                 "price ceiling", "price floor"]):
         scores["social_sciences"] = scores.get("social_sciences", 0) + 3
     
+    # Geography patterns
+    if any(w in text for w in ["continentality", "universalizing religion",
+                                "missionaries", "bulldozing", "temperature extremes",
+                                "population density", "urban sprawl"]):
+        scores["social_sciences"] = scores.get("social_sciences", 0) + 3
+    
     # STEM patterns
     if any(w in text for w in ["inclined plane", "kinetic energy", "potential energy",
                                 "periodic table", "lewis structure", "covalent bond",
