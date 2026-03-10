@@ -167,7 +167,7 @@ def score_complexity(question, choices):
     # Multi-step signals
     for pattern in COMPLEXITY_SIGNALS["multi_step"]:
         if re.search(pattern, text):
-            score += 0.08
+            score += 0.06
             break
 
     # Technical signals
