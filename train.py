@@ -417,6 +417,11 @@ def classify_domain(question, choices):
     if any("True, True" in c for c in choices) and any("False, False" in c for c in choices):
         scores["stem"] = scores.get("stem", 0) + 3
     
+    # Choices with units (kg, m, J, etc.) → STEM
+    unit_pattern = r'\b(kg|m/s|m²|cm|mm|nm|Hz|eV|mol|atm|ohm|watts?|joules?|newtons?|volts?|amps?)\b'
+    if any(re.search(unit_pattern, c, re.IGNORECASE) for c in choices):
+        scores["stem"] = scores.get("stem", 0) + 2
+    
     if max(scores.values()) == 0:
         return "other"
     return max(scores, key=scores.get)
