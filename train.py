@@ -428,6 +428,36 @@ SUBJECT_PATTERNS = {
                      "nuclear weapon", "arms control"],
         "min_signals": 1,
     },
+    # COMPLEX: prehistory
+    "prehistory": {
+        "tier": "COMPLEX",
+        "signals": ["mogollon", "inca", "mesopotamia",
+                     "rockshelter", "quarry site", "neolithic",
+                     "paleolithic", "bronze age", "iron age",
+                     "archaeological", "artifact", "excavation",
+                     "hunter-gatherer", "domestication"],
+        "min_signals": 1,
+    },
+    # COMPLEX: world_religions
+    "world_religions": {
+        "tier": "COMPLEX",
+        "signals": ["shari'ah", "guru", "darbar sahib",
+                     "deaconess", "christianity", "buddhism",
+                     "hinduism", "islam", "judaism",
+                     "torah", "quran", "vedas",
+                     "mosque", "synagogue", "monastery"],
+        "min_signals": 2,
+    },
+    # COMPLEX: philosophy
+    "philosophy": {
+        "tier": "COMPLEX",
+        "signals": ["utilitarianism", "rule-utilitarianism",
+                     "deontological", "kantian", "consequentialism",
+                     "epistemology", "metaphysics", "ontology",
+                     "moral realism", "moral relativism",
+                     "think critically", "good reasons"],
+        "min_signals": 1,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
@@ -798,6 +828,9 @@ def score_request(question, choices):
         domain = "humanities"
     # History-detected → humanities domain
     if _detected_subject and "history" in _detected_subject:
+        domain = "humanities"
+    # Prehistory/world_religions/philosophy → humanities domain
+    if _detected_subject and any(s in _detected_subject for s in ["prehistory", "world_religions", "philosophy"]):
         domain = "humanities"
     # Government/economics-detected → social_sciences domain
     if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies"]):
