@@ -281,7 +281,7 @@ SUBJECT_PATTERNS = {
                      "vygotsky", "curvilinear", "affirmative action",
                      "attribution", "crowding", "grouping children",
                      "dsm-5", "kappa statistic", "test theory",
-                     "cohen's d"],
+                     "cohen\u2019s d", "cohen's d"],
         "min_signals": 1,
     },
     # COMPLEX: moral_scenarios — all start with this exact phrase
@@ -295,7 +295,7 @@ SUBJECT_PATTERNS = {
 
 def detect_tier_from_subject(question, choices):
     """Try to detect the subject and return tier directly. Returns None if uncertain."""
-    text = question.lower()
+    text = question.lower().replace("\u2019", "'").replace("\u2018", "'")
     all_text = text + " " + " ".join(c.lower() for c in choices)
 
     for subj, config in SUBJECT_PATTERNS.items():
