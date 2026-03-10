@@ -375,7 +375,13 @@ def classify_domain(question, choices):
                                 "comparative advantage", "opportunity cost",
                                 "price ceiling", "price floor"]):
         scores["social_sciences"] = scores.get("social_sciences", 0) + 3    # High-confidence domain indicators (weight 3x)
-    strong_signals = {
+    
+    # STEM patterns
+    if any(w in text for w in ["inclined plane", "free body diagram", "kinetic energy",
+                                "potential energy", "ohm's law", "boyle's law",
+                                "periodic table", "lewis structure", "covalent bond",
+                                "ionic bond", "molar mass"]):
+        scores["stem"] = scores.get("stem", 0) + 3    strong_signals = {
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
                  "wavelength", "velocity", "compiler", "eigenvalue",
                  "standard deviation", "speed of", "mass of", "energy of",
