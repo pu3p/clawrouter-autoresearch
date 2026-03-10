@@ -440,14 +440,6 @@ def classify_domain(question, choices):
     if any("True, True" in c for c in choices) and any("False, False" in c for c in choices):
         scores["stem"] = scores.get("stem", 0) + 3
     
-    # Negative signals — reduce score when these appear in wrong context
-    # "cell" in stem context but with medical terms → likely other
-    if "cell" in text and any(w in text for w in ["patient", "clinical", "blood", "tissue"]):
-        scores["other"] = scores.get("other", 0) + 2
-    # "gene" with medical context → other
-    if "gene" in text and any(w in text for w in ["disease", "syndrome", "disorder", "mutation"]):
-        scores["other"] = scores.get("other", 0) + 2
-    
     if max(scores.values()) == 0:
         return "other"
     return max(scores, key=scores.get)
