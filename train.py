@@ -150,7 +150,11 @@ SUBJECT_PATTERNS = {
                      "jurisdiction", "verdict", "prosecution", "testimony",
                      "warrant", "indictment", "felony", "misdemeanor",
                      "contract", "breach", "damages", "liable", "negligence",
-                     "motion to", "objection", "sustained", "overruled"],
+                     "motion to", "objection", "sustained", "overruled",
+                     "convey", "deed", "easement", "tenant", "landlord",
+                     "executor", "probate", "heir", "bequest",
+                     "tort", "injunction", "subpoena", "arraignment",
+                     "guilty", "acquitted", "sentenced", "parole"],
         "min_signals": 2,
     },
     # REASONING: professional medicine
