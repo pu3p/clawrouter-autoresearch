@@ -102,6 +102,9 @@ DOMAIN_KEYWORDS = {
         "security", "terrorism", "nuclear", "deterrence", "proliferation",
         "humanitarian", "refugee", "asylum", "genocide",
         "voter", "ballot", "campaign", "partisan", "lobby",
+        "econometric", "forecasting", "autoregressive", "heteroscedasticity",
+        "multicollinearity", "residuals", "intercept coefficient",
+        "time series", "leptokurtic",
     ],
     "other": [
         "patient", "diagnosis", "treatment", "symptom", "disease", "clinical",
