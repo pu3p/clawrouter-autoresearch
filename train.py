@@ -175,8 +175,21 @@ def classify_domain(question, choices):
     """Classify question into a domain based on keyword matching."""
     text = (question + " " + " ".join(choices)).lower()
     scores = {}
+    
+    # High-confidence domain indicators (weight 3x)
+    strong_signals = {
+        "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral"],
+        "humanities": ["philosophy", "ethics", "constitution", "fallacy", "theology"],
+        "social_sciences": ["GDP", "inflation", "election", "psychology", "demographic"],
+        "other": ["diagnosis", "patient", "symptom", "accounting", "revenue"],
+    }
+    
     for domain, keywords in DOMAIN_KEYWORDS.items():
-        scores[domain] = sum(1 for kw in keywords if kw.lower() in text)
+        count = sum(1 for kw in keywords if kw.lower() in text)
+        # Triple weight for strong signals
+        if domain in strong_signals:
+            count += 2 * sum(1 for kw in strong_signals[domain] if kw.lower() in text)
+        scores[domain] = count
     
     # Numeric answers → likely STEM
     numeric_choices = sum(1 for c in choices if re.search(r'\d', c))
