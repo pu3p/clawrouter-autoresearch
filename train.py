@@ -444,7 +444,8 @@ def classify_domain(question, choices):
     # Extra boost for very distinctive keywords (>=80% domain-specific)
     ultra_strong = {
         "stem": ["wavelength", "binary", "orbit", "proton", "acceleration", "subgroup", "python", "gradient",
-                 "equation", "matrix", "software", "molecule", "probability", "magnetic"],
+                 "equation", "matrix", "software", "molecule", "probability", "magnetic",
+                 "nucleus", "polynomial", "vector"],
         "humanities": ["statute", "fallacy", "premise", "ritual", "plaintiff", "morality", "doctrine",
                        "defendant", "prosecution", "attorney", "jurisdiction", "morally wrong",
                        "negligence", "felony", "testimony", "witness",
