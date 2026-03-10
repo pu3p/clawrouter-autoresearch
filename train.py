@@ -54,6 +54,12 @@ DOMAIN_KEYWORDS = {
         "geography", "population", "urban", "rural", "climate", "region",
         "public relations", "media", "communication", "audience",
         "security", "conflict", "diplomacy", "international",
+        "economic", "macroeconomic", "microeconomic", "recession", "interest rate",
+        "political science", "legislature", "congress", "senate", "parliament",
+        "psychological", "mental", "emotion", "motivation", "perception",
+        "sociological", "demographic", "ethnicity", "inequality", "migration",
+        "geographic", "continent", "hemisphere", "latitude", "longitude",
+        "foreign policy", "treaty", "alliance", "sovereignty", "nation",
     ],
     "other": [
         "patient", "diagnosis", "treatment", "symptom", "disease", "clinical",
