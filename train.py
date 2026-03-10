@@ -227,7 +227,11 @@ SUBJECT_PATTERNS = {
         "tier": "REASONING",
         "signals": ["psychologist", "therapist", "counselor", "ethical",
                      "licensure", "confidentiality", "informed consent",
-                     "DSM", "assessment", "intervention"],
+                     "DSM", "assessment", "intervention",
+                     "client", "insurance", "therapy fee",
+                     "kappa", "test theory", "norm-referenced",
+                     "personality inventory", "response bias",
+                     "APA", "clinical psychologist"],
         "min_signals": 2,
     },
     # REASONING: professional psychology (high-confidence single signals)
