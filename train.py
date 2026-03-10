@@ -1155,7 +1155,7 @@ def score_request(question, choices):
     if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics", "anatomy", "management", "college_medicine", "human_aging"]):
         domain = "other"
     # Physics/astronomy/computer_security/college_computer_science → stem domain
-    if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security", "college_computer_science", "abstract_algebra", "machine_learning", "electrical_engineering"]):
+    if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security", "college_computer_science", "abstract_algebra", "machine_learning", "electrical_engineering", "high_school_biology", "high_school_chemistry", "high_school_physics", "high_school_statistics", "high_school_mathematics", "high_school_computer_science"]):
         domain = "stem"
     return {"tier": tier, "domain": domain}
 
