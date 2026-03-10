@@ -183,7 +183,7 @@ SUBJECT_PATTERNS = {
                      "50% of a number", "votes in favor", "value of |",
                      "what is x if", "pennies", "grams of magnesium",
                      "3 over 2", "coins are thoroughly",
-                     "expression 64", "drove 1,027", "solve "],
+                     "expression 64", "drove 1,027"],
         "min_signals": 1,
     },
     # MEDIUM: high school history — very long passages with "This question refers to"
