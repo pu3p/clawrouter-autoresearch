@@ -703,7 +703,8 @@ SUBJECT_PATTERNS = {
     "conceptual_physics_strong": {
         "tier": "COMPLEX",
         "signals": ["none of these neither", "neither of these",
-                     "of the atmosphere"],
+                     "of the atmosphere", "than mg",
+                     "of charge.", "two separated"],
         "min_signals": 1,
     },
     # COMPLEX: astronomy
