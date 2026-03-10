@@ -379,7 +379,10 @@ SUBJECT_PATTERNS = {
         "tier": "MEDIUM",
         "signals": ["the equilibrium price", "equilibrium quantity",
                      "real gdp", "full employment.",
-                     "the price level", "equilibrium price level"],
+                     "the price level", "equilibrium price level",
+                     "aggregate supply", "below full",
+                     "quantity of output", "money multiplier",
+                     "circular-flow diagram", "law of demand"],
         "min_signals": 1,
     },
     # MEDIUM: high_school_microeconomics
