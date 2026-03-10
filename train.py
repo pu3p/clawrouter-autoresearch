@@ -346,6 +346,14 @@ SUBJECT_PATTERNS = {
                      "separation of church", "majority party"],
         "min_signals": 2,
     },
+    # MEDIUM: high_school_government_strong
+    "high_school_government_strong": {
+        "tier": "MEDIUM",
+        "signals": ["the secretary of", "entitlement programs",
+                     "constitutional amendment.", "national government",
+                     "most such programs"],
+        "min_signals": 1,
+    },
     # MEDIUM: high_school_macroeconomics
     "high_school_macroeconomics": {
         "tier": "MEDIUM",
@@ -378,6 +386,14 @@ SUBJECT_PATTERNS = {
                      "minimum wage", "total revenue",
                      "utility-maximizing", "demand for"],
         "min_signals": 2,
+    },
+    # MEDIUM: high_school_microeconomics_strong
+    "high_school_microeconomics_strong": {
+        "tier": "MEDIUM",
+        "signals": ["average total", "average variable",
+                     "a firm's", "product market",
+                     "a monopolistically", "cost equals"],
+        "min_signals": 1,
     },
     # MEDIUM: high_school_biology
     "high_school_biology": {
@@ -455,6 +471,14 @@ SUBJECT_PATTERNS = {
                      "velocity", "kinetic energy", "potential energy",
                      "circuit", "voltage", "resistance"],
         "min_signals": 3,
+    },
+    # MEDIUM: high_school_physics_strong
+    "high_school_physics_strong": {
+        "tier": "MEDIUM",
+        "signals": ["the swimmer's", "swimmer's arms",
+                     "the cart", "average kinetic",
+                     "the molecules of"],
+        "min_signals": 1,
     },
     # MEDIUM: high_school_statistics
     "high_school_statistics": {
