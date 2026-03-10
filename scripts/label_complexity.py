@@ -163,7 +163,11 @@ def main():
             "complexity_score", all_scores[split_name]
         )
 
-    ds.save_to_disk(INPUT_DIR)
+    import shutil
+    tmp_dir = INPUT_DIR + "_tmp"
+    ds.save_to_disk(tmp_dir)
+    shutil.rmtree(INPUT_DIR)
+    os.rename(tmp_dir, INPUT_DIR)
     print(f"Saved to {INPUT_DIR}")
 
     meta = {
