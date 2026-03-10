@@ -48,6 +48,8 @@ DOMAIN_KEYWORDS = {
         "prehistoric", "neolithic", "paleolithic", "bronze age", "iron age",
         "defendant", "prosecution", "attorney", "jurisdiction",
         "morally wrong", "scenario", "utilitarianism", "deontological",
+        "inca", "maya", "aztec", "mesopotamia", "pharaoh", "pyramid",
+        "excavation", "burial", "pottery", "stone age", "hunter-gatherer",
     ],
     "social_sciences": [
         "economy", "GDP", "inflation", "unemployment", "fiscal", "monetary",
