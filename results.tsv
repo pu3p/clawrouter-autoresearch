@@ -1,0 +1,58 @@
+commit	combined_score	tier_acc	domain_acc	status	description
+239e2ca	0.292293	0.078380	0.506205	keep	baseline
+667be0f	0.310581	0.114958	0.506205	keep	lower tier thresholds (0.15/0.35/0.60)
+1517994	0.497387	0.488570	0.506205	keep	baseline complexity 0.3 (most questions are COMPLEX)
+2c5b3ac	0.499673	0.488570	0.510777	keep	expand STEM keywords
+14e6868	0.508165	0.488570	0.527760	keep	expand humanities keywords
+fee336e	0.509144	0.488570	0.529719	keep	expand social sciences keywords
+4be74bf	0.513390	0.488570	0.538210	keep	expand other domain keywords
+0ba58fd	0.510124	0.482038	0.538210	discard	math notation detection (tier acc dropped)
+f3aefff	0.513390	0.488570	0.538210	discard	sqrt weighting (no improvement)
+6266bd6	0.499673	0.461137	0.538210	discard	which of the following detection (tier acc dropped)
+61a9dc2	0.461463	0.384716	0.538210	discard	threshold adjustment (worse)
+580b42e	0.511757	0.485304	0.538210	discard	expand reasoning keywords (tier acc dropped)
+66d9d0d	0.513063	0.488570	0.537557	discard	acronym matching (slight drop)
+9b0c535	0.505879	0.473547	0.538210	discard	lower baseline + stronger signals (worse)
+417d53e	0.513717	0.489223	0.538210	keep	question mark count signal
+4586d15	0.533638	0.489223	0.578054	keep	boost STEM for numeric choices
+95e2f62	0.481711	0.489223	0.474200	discard	code pattern detection (domain acc dropped)
+d280cf7	0.505879	0.433703	0.578054	discard	threshold adjustment (tier acc dropped)
+a47522c	0.533638	0.489223	0.578054	discard	lower SIMPLE threshold (no change)
+0a3f33c	0.548008	0.517962	0.578054	keep	comma count signal
+638cc66	0.550294	0.522534	0.578054	keep	all/none of the above detection
+9abfe73	0.549314	0.520575	0.578054	discard	colon detection (slight drop)
+767b50a	0.554866	0.522534	0.587198	keep	strong signal weighting
+10430cf	0.514696	0.442195	0.587198	discard	lower baseline 0.28 (tier acc dropped)
+522747f	0.563684	0.540170	0.587198	keep	capitalization ratio signal
+9063d42	0.571195	0.555193	0.587198	keep	quoted text detection
+39e86b6	0.571195	0.555193	0.587198	discard	statement weight increase (no change)
+18685c6	0.570869	0.554540	0.587198	discard	best describes patterns (slight drop)
+312b366	0.571522	0.555193	0.587851	keep	add clinical/therapy strong signals
+2388b5c	0.571522	0.555193	0.587851	discard	MEDIUM threshold 0.32 (no change)
+6e607d5	0.577074	0.566297	0.587851	keep	word count bins
+44117e4	0.542782	0.566297	0.519268	discard	numbers in question (domain acc dropped)
+fd61da9	0.583932	0.580013	0.587851	keep	word count thresholds 35/22/12
+a582564	0.582299	0.576747	0.587851	discard	baseline 0.32 (slight drop)
+cb8c9c0	0.582299	0.576747	0.587851	discard	COMPLEX 0.58 (slight drop)
+18f8fbf	0.583932	0.580013	0.587851	discard	choice length thresholds (no change)
+42f7066	0.583605	0.579360	0.587851	discard	find/determine/identify (slight drop)
+12d2c23	0.583605	0.579360	0.587851	discard	reduce question mark weight
+a5750a1	0.587198	0.580013	0.594383	keep	humanities strong signals expanded
+0066eee	0.587524	0.580666	0.594383	keep	semicolon detection
+4cf86e1	0.587198	0.580013	0.594383	discard	parenthetical 0.08 (slight drop)
+2190c2d	0.585892	0.580666	0.591117	discard	social sciences strong signals
+b8df630	0.574461	0.554540	0.594383	discard	baseline 0.29 (tier acc dropped)
+ec8d8c7	0.585565	0.576747	0.594383	discard	negation 0.08 (slight drop)
+fa5484a	0.587524	0.580666	0.594383	discard	STEM strong signals (no change)
+2ca407e	0.589157	0.583932	0.594383	keep	comma threshold 2
+3e25189	0.589157	0.583932	0.594383	discard	all/none 0.12 (no change)
+2cb7c05	0.596342	0.598302	0.594383	keep	word count 33/20/10
+09da436	0.600588	0.606793	0.594383	keep	word count 32/19/9
+7143e2d	0.602874	0.611365	0.594383	keep	word count 31/18/8
+3956aca	0.605160	0.615937	0.594383	keep	word count 30/17/7
+5f7cbab	0.605487	0.616590	0.594383	keep	word count 29/16/6
+b7ac289	0.607120	0.619856	0.594383	keep	word count 28/15/5
+c9fa6e9	0.606793	0.619203	0.594383	discard	word count 27/14/5 (slight drop)
+7450e87	0.601568	0.608752	0.594383	discard	word count weights increase (worse)
+0a196de	0.607120	0.619856	0.594383	discard	reasoning 0.10 (no change)
+158cc51	0.605487	0.616590	0.594383	discard	technical 0.12 (slight drop)
