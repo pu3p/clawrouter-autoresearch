@@ -134,7 +134,7 @@ def score_complexity(question, choices):
 
     # Parenthetical expressions → added context/complexity
     if question.count("(") >= 2:
-        score += 0.08
+        score += 0.06
 
     # Comma count → sentence complexity
     if question.count(",") >= 3:
