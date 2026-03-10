@@ -130,7 +130,7 @@ def score_complexity(question, choices):
 
     # Multiple questions → higher complexity
     if question.count("?") > 1:
-        score += 0.05
+        score += 0.08
 
     # Parenthetical expressions → added context/complexity
     if question.count("(") >= 2:
