@@ -350,6 +350,12 @@ def classify_domain(question, choices):
     text = (question + " " + " ".join(choices)).lower()
     scores = {}
     
+    # Psychology context detection: person + age pattern suggests psychology
+    if re.search(r'age \d+|aged \d+|\d+-year-old', question):
+        if any(w in text for w in ["psychologist", "therapist", "client", "session",
+                                    "therapy", "counselor", "diagnosis", "treatment"]):
+            scores["social_sciences"] = scores.get("social_sciences", 0) + 3
+    
     # High-confidence domain indicators (weight 3x)
     strong_signals = {
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
