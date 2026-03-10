@@ -320,6 +320,18 @@ SUBJECT_PATTERNS = {
                      "behavior and mental", "abusive"],
         "min_signals": 2,
     },
+    # MEDIUM: high_school_psychology_strong — unique phrases
+    "high_school_psychology_strong": {
+        "tier": "MEDIUM",
+        "signals": ["capital punishment", "person diagnosed",
+                     "ratio schedules", "schedules of",
+                     "psychological disorders", "representativeness heuristic",
+                     "availability heuristic", "serial position",
+                     "dissociative disorder", "behavior modification",
+                     "psychology exam", "research participant",
+                     "sensory memory"],
+        "min_signals": 1,
+    },
     # MEDIUM: high_school_government_and_politics
     "high_school_government": {
         "tier": "MEDIUM",
