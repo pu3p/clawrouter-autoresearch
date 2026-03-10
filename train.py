@@ -577,7 +577,7 @@ def score_request(question, choices):
         complexity = score_complexity(question, choices)
         tier = complexity_to_tier(complexity)
         # Domain-aware tier adjustment: social_sciences has high MEDIUM ratio
-        if tier == "COMPLEX" and domain == "social_sciences" and complexity < 0.40:
+        if tier == "COMPLEX" and domain == "social_sciences" and complexity < 0.44:
             tier = "MEDIUM"
         # Long humanities questions are likely professional_law (REASONING)
         if tier == "COMPLEX" and domain == "humanities" and len(question) > 300:
