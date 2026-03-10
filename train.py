@@ -463,7 +463,14 @@ def classify_domain(question, choices):
                                 "side effects", "deprivation",
                                 "brain damage", "hemisphere", "adhd",
                                 "hyperactivity", "stages of development",
-                                "capital punishment", "chat room"]):
+                                "capital punishment", "chat room",
+                                "psychologist", "psychoanalytic", "psychotic",
+                                "psychoactive", "schizophrenia", "dissociative",
+                                "mnemonic", "teratogen", "newborn reflex",
+                                "secondary drives", "autonomic nervous",
+                                "endocrine gland", "memorize", "school play",
+                                "peek-a-boo", "object permanence",
+                                "humanistic perspective", "ap psychology"]):
         scores["social_sciences"] = scores.get("social_sciences", 0) + 3
     
     # Government/politics patterns
