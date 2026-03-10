@@ -360,7 +360,10 @@ SUBJECT_PATTERNS = {
                      "small intestine", "photosynthesis", "mitosis",
                      "meiosis", "dna replication", "allele",
                      "phenotype", "genotype", "ecosystem",
-                     "food chain", "cell membrane", "ribosome"],
+                     "food chain", "cell membrane", "ribosome",
+                     "earthworm", "spiracle", "alveoli",
+                     "hemophilia", "extraembryonic", "predator",
+                     "aquatic plant", "chloroplast", "xylem"],
         "min_signals": 2,
     },
     # MEDIUM: high_school_chemistry
