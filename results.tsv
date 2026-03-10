@@ -98,3 +98,17 @@ b9442a7	0.692031	0.694317	0.689745	discard	numeric STEM boost 3 (domain dropped)
 5186443	0.689419	0.694317	0.684520	discard	all-numeric STEM signal (domain dropped)
 e04f1f4	0.693338	0.693664	0.693011	keep	mathematical notation detection for STEM
 f2dce7e	0.689745	0.693664	0.685826	discard	tie-breaking mechanism (domain dropped)
+6d1ae8e	0.695950	0.694317	0.697583	keep	law/history/religion keywords in humanities
+efd3343	0.695624	0.694317	0.696930	discard	medical/accounting strong signals (slight drop)
+8f0cf93	0.697583	0.694317	0.700849	keep	True/False statement pair detection for STEM
+2a0a626	0.697583	0.694317	0.700849	discard	Statement 1/2 STEM detection (no change)
+736b0ea	0.698236	0.695624	0.700849	keep	more professional_law signals
+5d6e517	0.699216	0.697583	0.700849	keep	more professional_psychology tier signals
+bfe28c4	0.700523	0.700196	0.700849	keep	more professional_accounting tier signals
+18e2e95	0.700523	0.700196	0.700849	discard	single law signals (no change)
+9e29fb0	0.691705	0.682560	0.700849	discard	law min_signals 1 (too many false positives)
+9836f11	0.700523	0.700196	0.700849	discard	psychology context detection (no change)
+623245f	0.701829	0.700196	0.703462	keep	medical/global keywords in other
+25cf57b	0.702809	0.698890	0.706728	keep	sociology strong signals
+9143b71	0.703462	0.698236	0.708687	keep	econometrics keywords in social_sciences
+3db90b0	0.704768	0.697583	0.711953	keep	human_sexuality strong signals
