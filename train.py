@@ -580,6 +580,61 @@ SUBJECT_PATTERNS = {
                      "orgasm", "erogenous"],
         "min_signals": 1,
     },
+    # COMPLEX: econometrics
+    "econometrics": {
+        "tier": "COMPLEX",
+        "signals": ["random effects", "explanatory variables",
+                     "the rhs", "correlated with"],
+        "min_signals": 1,
+    },
+    # COMPLEX: public_relations
+    "public_relations": {
+        "tier": "COMPLEX",
+        "signals": ["of pr", "public relations",
+                     "your supervisor", "to reproduce the"],
+        "min_signals": 1,
+    },
+    # COMPLEX: international_law
+    "international_law": {
+        "tier": "COMPLEX",
+        "signals": ["of the treaty", "optional clause",
+                     "the parties to", "treaties that"],
+        "min_signals": 1,
+    },
+    # COMPLEX: logical_fallacies
+    "logical_fallacies": {
+        "tier": "COMPLEX",
+        "signals": ["the fallacy of", "claim should be accepted",
+                     "that a claim"],
+        "min_signals": 1,
+    },
+    # COMPLEX: formal_logic
+    "formal_logic": {
+        "tier": "COMPLEX",
+        "signals": ["consistent. consistent valuation",
+                     "consistent valuation when",
+                     "are true and"],
+        "min_signals": 1,
+    },
+    # COMPLEX: abstract_algebra
+    "abstract_algebra": {
+        "tier": "COMPLEX",
+        "signals": ["statement 1 |", "statement 2 |"],
+        "min_signals": 1,
+    },
+    # COMPLEX: machine_learning
+    "machine_learning": {
+        "tier": "COMPLEX",
+        "signals": ["p(x, y, z)", "set it to zero"],
+        "min_signals": 1,
+    },
+    # COMPLEX: electrical_engineering
+    "electrical_engineering": {
+        "tier": "COMPLEX",
+        "signals": ["no load", "quantity being measured.",
+                     "electric field"],
+        "min_signals": 1,
+    },
     # COMPLEX: conceptual_physics
     "conceptual_physics": {
         "tier": "COMPLEX",
@@ -1035,19 +1090,19 @@ def score_request(question, choices):
     if _detected_subject and "history" in _detected_subject:
         domain = "humanities"
     # Prehistory/world_religions/philosophy/moral_disputes → humanities domain
-    if _detected_subject and any(s in _detected_subject for s in ["prehistory", "world_religions", "philosophy", "moral_disputes"]):
+    if _detected_subject and any(s in _detected_subject for s in ["prehistory", "world_religions", "philosophy", "moral_disputes", "international_law", "logical_fallacies", "formal_logic"]):
         domain = "humanities"
     # Human_sexuality → social_sciences domain
     if _detected_subject and "human_sexuality" in _detected_subject:
         domain = "social_sciences"
     # Government/economics-detected → social_sciences domain
-    if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies"]):
+    if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies", "econometrics", "public_relations", "human_sexuality"]):
         domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
     if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics", "anatomy", "management", "college_medicine"]):
         domain = "other"
     # Physics/astronomy/computer_security/college_computer_science → stem domain
-    if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security", "college_computer_science"]):
+    if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security", "college_computer_science", "abstract_algebra", "machine_learning", "electrical_engineering"]):
         domain = "stem"
     return {"tier": tier, "domain": domain}
 
