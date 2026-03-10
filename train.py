@@ -164,6 +164,12 @@ def classify_domain(question, choices):
     scores = {}
     for domain, keywords in DOMAIN_KEYWORDS.items():
         scores[domain] = sum(1 for kw in keywords if kw.lower() in text)
+    
+    # Numeric answers → likely STEM
+    numeric_choices = sum(1 for c in choices if re.search(r'\d', c))
+    if numeric_choices >= 3:
+        scores["stem"] = scores.get("stem", 0) + 2
+    
     if max(scores.values()) == 0:
         return "other"
     return max(scores, key=scores.get)
