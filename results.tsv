@@ -168,3 +168,19 @@ bcfcfe2	0.749184	0.770738	0.727629	discard	biology STEM keywords (dna hurts)
 a73dbde	0.749837	0.771391	0.728282	keep	normalize unicode in classify_domain
 6f1f438	0.749837	0.771391	0.728282	keep	force SIMPLE→STEM domain
 b03bef3	0.751470	0.771391	0.731548	keep	more other strong signals (crossed 0.75!)
+9413649	0.751143	0.771391	0.730895	discard	STEM strong signals (slightly worse)
+c2c2f1c	0.750816	0.771391	0.730242	discard	humanities strong signals (slightly worse)
+5b1316d	0.752123	0.771391	0.732854	keep	safest humanities strong signals
+89b4481	0.752449	0.771391	0.733508	keep	social_sciences strong signals
+c80aebe	0.751470	0.770085	0.732854	discard	more other strong signals (year-old hurts)
+de92ef8	0.752449	0.771391	0.733508	keep	safest other strong signals
+e550983	0.752449	0.771391	0.733508	keep	history of other strong signal
+ffd1653	0.752449	0.771391	0.733508	keep	more government patterns
+d775e6f	0.753103	0.772044	0.734161	keep	geography pattern detection
+15487c5	0.753756	0.773351	0.734161	keep	more professional_law_strong signals
+014ce1d	0.754409	0.774657	0.734161	keep	remaining professional_accounting_strong
+74a1bc4	0.754735	0.775310	0.734161	keep	nares and bloody nose medicine signals
+f855f8e	0.757022	0.779882	0.734161	keep	more elementary_mathematics signals
+5a5e536	0.759961	0.785761	0.734161	keep	more elementary_mathematics signals
+5b494fc	0.761920	0.790986	0.732854	keep	more elementary_mathematics signals (11 more)
+e36b06a	0.763880	0.794252	0.733508	keep	remaining elementary_mathematics signals
