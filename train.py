@@ -402,7 +402,9 @@ def classify_domain(question, choices):
     # Government/politics patterns
     if any(w in text for w in ["interest groups", "federal court", "federal state",
                                 "political party", "electoral", "incumbent",
-                                "filibuster", "gerrymandering"]):
+                                "filibuster", "gerrymandering",
+                                "free speech", "first amendment", "separation of church",
+                                "court decision", "court system"]):
         scores["social_sciences"] = scores.get("social_sciences", 0) + 3
     
     
