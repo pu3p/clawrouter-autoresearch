@@ -272,6 +272,11 @@ def classify_domain(question, choices):
     text = (question + " " + " ".join(choices)).lower()
     scores = {}
     
+    # Subject-specific overrides
+    # moral_scenarios: always humanities
+    if "for which of these two scenarios does the main character" in text:
+        return "humanities"
+    
     # High-confidence domain indicators (weight 3x)
     strong_signals = {
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
