@@ -76,6 +76,12 @@ DOMAIN_KEYWORDS = {
         "aggregate demand", "aggregate supply", "money supply", "price level",
         "demand curve", "supply curve", "marginal cost", "equilibrium",
         "monopoly", "oligopoly", "elasticity", "perfectly competitive",
+        "mnemonic", "classical conditioning", "operant", "phobia",
+        "anxiety", "depression", "schizophrenia", "bipolar",
+        "freud", "piaget", "skinner", "pavlov", "maslow",
+        "iq", "intelligence", "aptitude", "achievement test",
+        "approach-avoidance", "conflict resolution",
+        "stakeholder", "public opinion", "propaganda",
     ],
     "other": [
         "patient", "diagnosis", "treatment", "symptom", "disease", "clinical",
