@@ -555,7 +555,10 @@ SUBJECT_PATTERNS = {
                      "hinduism", "islam", "judaism",
                      "torah", "quran", "vedas",
                      "mosque", "synagogue", "monastery",
-                     "festival of"],
+                     "festival of", "bushido", "baptism",
+                     "theologian", "pelagius", "calvin",
+                     "sutra", "shoah", "apocalypse",
+                     "zen", "maitreya"],
         "min_signals": 2,
     },
     # COMPLEX: philosophy
@@ -726,7 +729,11 @@ SUBJECT_PATTERNS = {
     "college_medicine": {
         "tier": "COMPLEX",
         "signals": ["graduated cylinder", "adhesive forces",
-                     "fibres. type", "the mercury"],
+                     "fibres. type", "the mercury",
+                     "how many chromosomes", "drugs to modify",
+                     "production of atp.", "cohesive forces",
+                     "creatine kinase", "creatine to load",
+                     "contractile proteins", "somatic eukaryotic"],
         "min_signals": 1,
     },
     # COMPLEX: business_ethics
