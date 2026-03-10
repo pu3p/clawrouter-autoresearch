@@ -587,6 +587,15 @@ SUBJECT_PATTERNS = {
                      "the rhs", "correlated with"],
         "min_signals": 1,
     },
+    # COMPLEX: us_foreign_policy
+    "us_foreign_policy": {
+        "tier": "COMPLEX",
+        "signals": ["cold war", "league of nations",
+                     "un security council", "soft power",
+                     "grand strategy", "containment",
+                     "primacy", "belligerent"],
+        "min_signals": 1,
+    },
     # COMPLEX: public_relations
     "public_relations": {
         "tier": "COMPLEX",
@@ -1095,7 +1104,7 @@ def score_request(question, choices):
     if _detected_subject and "human_sexuality" in _detected_subject:
         domain = "social_sciences"
     # Government/economics-detected → social_sciences domain
-    if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies", "econometrics", "public_relations", "human_sexuality"]):
+    if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies", "econometrics", "public_relations", "human_sexuality", "us_foreign_policy"]):
         domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
     if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics", "anatomy", "management", "college_medicine"]):
