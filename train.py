@@ -114,6 +114,10 @@ DOMAIN_KEYWORDS = {
         "wound", "fracture", "inflammation", "chronic", "acute",
         "brand", "consumer", "advertising", "promotion", "segmentation",
         "stakeholder", "shareholder", "merger", "acquisition",
+        "depreciation", "amortization", "receivable", "payable",
+        "debit", "credit", "ledger", "journal entry",
+        "serum", "plasma", "biopsy", "lesion", "tumor",
+        "antigen", "antibody", "lymphocyte", "macrophage",
     ],
 }
 
