@@ -388,7 +388,7 @@ def score_complexity(question, choices):
 
 def classify_domain(question, choices):
     """Classify question into a domain based on keyword matching."""
-    text = (question + " " + " ".join(choices)).lower()
+    text = (question + " " + " ".join(choices)).lower().replace("\u2019", "'").replace("\u2018", "'")
     scores = {}
     
     # Question pattern detection
