@@ -435,7 +435,7 @@ def classify_domain(question, choices):
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
                  "wavelength", "velocity", "compiler", "eigenvalue",
                  "standard deviation", "speed of", "mass of", "energy of",
-                 "work done", "such that"],
+                 "work done", "such that", "array", "momentum"],
         "humanities": ["philosophy", "ethics", "constitution", "fallacy", "theology",
                        "legal", "court", "statute", "morally wrong", "defendant",
                        "archaeological", "prehistoric", "scripture",
