@@ -84,6 +84,11 @@ DOMAIN_KEYWORDS = {
         "nutrient", "mineral", "carbohydrate", "metabolism", "dietary",
         "geriatric", "longevity", "senescence", "lifespan",
         "viral", "bacterial", "contagious", "pandemic", "vaccine",
+        "blood", "muscle", "bone", "tissue", "nerve", "artery", "vein",
+        "cholesterol", "glucose", "insulin", "hormone", "enzyme",
+        "wound", "fracture", "inflammation", "chronic", "acute",
+        "brand", "consumer", "advertising", "promotion", "segmentation",
+        "stakeholder", "shareholder", "merger", "acquisition",
     ],
 }
 
