@@ -206,3 +206,8 @@ dff5a50	0.791313	0.802743	0.779882	keep	high_school_government subject detection
 af31616	0.794252	0.808622	0.779882	keep	high_school_macroeconomics subject detection + domain override
 dc9e064	0.795232	0.810581	0.779882	keep	high_school_microeconomics subject detection + domain override
 9fac32d	0.798498	0.816460	0.780536	keep	hs_biology/chemistry/geography/physics/statistics detection
+dc453f7	0.798824	0.817113	0.780536	keep	increase hs_physics min_signals to 3
+75923b3	0.790333	0.819073	0.761594	revert	biology detection caused domain regression
+7e73bf2	0.798824	0.817113	0.780536	revert	reverted biology changes
+8ff7e43	0.799151	0.817766	0.780536	keep	expand hs_biology signals safely
+c8ef20c	0.801110	0.819073	0.783148	keep	sociology + security_studies detection + domain override
