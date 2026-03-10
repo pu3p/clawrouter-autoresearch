@@ -170,7 +170,11 @@ SUBJECT_PATTERNS = {
         "signals": ["solve for", "simplest form", "round to the nearest",
                      "what was the total cost", "write.*as a fraction",
                      "mixed number", "solve the equation", "total cost",
-                     "cents per pound", "ice cream"],
+                     "cents per pound", "ice cream",
+                     "which expression", "scored", "how many points",
+                     "how many pieces", "how much will it cost",
+                     "ticket prices", "teaspoons", "tablespoons",
+                     "packs of gum", "multiple of", "which method"],
         "min_signals": 1,
     },
     # MEDIUM: high school history — very long passages with "This question refers to"
