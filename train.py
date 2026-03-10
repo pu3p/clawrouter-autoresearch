@@ -529,6 +529,14 @@ SUBJECT_PATTERNS = {
                      "hunter-gatherer", "domestication"],
         "min_signals": 1,
     },
+    # COMPLEX: prehistory_strong
+    "prehistory_strong": {
+        "tier": "COMPLEX",
+        "signals": ["homo erectus", "homo ergaster", "homo antecessor",
+                     "million years", "skeletal remains",
+                     "first americans,", "those who lived"],
+        "min_signals": 1,
+    },
     # COMPLEX: world_religions
     "world_religions": {
         "tier": "COMPLEX",
@@ -547,6 +555,29 @@ SUBJECT_PATTERNS = {
                      "epistemology", "metaphysics", "ontology",
                      "moral realism", "moral relativism",
                      "think critically", "good reasons"],
+        "min_signals": 1,
+    },
+    # COMPLEX: philosophy_strong
+    "philosophy_strong": {
+        "tier": "COMPLEX",
+        "signals": ["every pleasure is", "of philosophy",
+                     "equal concern for", "be chosen.",
+                     "pleasure is good"],
+        "min_signals": 1,
+    },
+    # COMPLEX: moral_disputes_strong
+    "moral_disputes_strong": {
+        "tier": "COMPLEX",
+        "signals": ["the original position", "should prohibit",
+                     "prohibit things"],
+        "min_signals": 1,
+    },
+    # COMPLEX: human_sexuality
+    "human_sexuality": {
+        "tier": "COMPLEX",
+        "signals": ["a g-spot", "masturbation produces",
+                     "the vagina", "sexual arousal",
+                     "orgasm", "erogenous"],
         "min_signals": 1,
     },
     # COMPLEX: conceptual_physics
@@ -989,9 +1020,12 @@ def score_request(question, choices):
     # History-detected → humanities domain
     if _detected_subject and "history" in _detected_subject:
         domain = "humanities"
-    # Prehistory/world_religions/philosophy → humanities domain
-    if _detected_subject and any(s in _detected_subject for s in ["prehistory", "world_religions", "philosophy"]):
+    # Prehistory/world_religions/philosophy/moral_disputes → humanities domain
+    if _detected_subject and any(s in _detected_subject for s in ["prehistory", "world_religions", "philosophy", "moral_disputes"]):
         domain = "humanities"
+    # Human_sexuality → social_sciences domain
+    if _detected_subject and "human_sexuality" in _detected_subject:
+        domain = "social_sciences"
     # Government/economics-detected → social_sciences domain
     if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies"]):
         domain = "social_sciences"
