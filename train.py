@@ -423,7 +423,7 @@ def classify_domain(question, choices):
     }
     for domain, keywords in ultra_strong.items():
         count = sum(1 for kw in keywords if kw.lower() in text)
-        scores[domain] = scores.get(domain, 0) + count * 3
+        scores[domain] = scores.get(domain, 0) + count * 2
     
     # Numeric answers → likely STEM
     numeric_choices = sum(1 for c in choices if re.search(r'\d', c))
