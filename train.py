@@ -391,18 +391,6 @@ def classify_domain(question, choices):
     
     if max(scores.values()) == 0:
         return "other"
-    
-    # If top two domains are close, use strong signals to break tie
-    sorted_domains = sorted(scores.items(), key=lambda x: -x[1])
-    top_score = sorted_domains[0][1]
-    if len(sorted_domains) > 1 and sorted_domains[1][1] >= top_score * 0.7:
-        # Close race — check strong signal counts
-        for domain in [sorted_domains[0][0], sorted_domains[1][0]]:
-            if domain in strong_signals:
-                strong_count = sum(1 for kw in strong_signals[domain] if kw.lower() in text)
-                if strong_count > 0:
-                    return domain
-    
     return max(scores, key=scores.get)
 
 
