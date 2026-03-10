@@ -154,8 +154,8 @@ COMPLEXITY_SIGNALS = {
 TIER_THRESHOLDS = {
     "SIMPLE": 0.15,
     "MEDIUM": 0.35,
-    "COMPLEX": 0.95,
-    # anything above 0.95 → REASONING
+    "COMPLEX": 1.0,
+    # anything above 1.0 → REASONING (only via subject detection)
 }
 
 # ---------------------------------------------------------------------------
