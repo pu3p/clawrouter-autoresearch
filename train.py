@@ -174,7 +174,12 @@ SUBJECT_PATTERNS = {
                      "which expression", "scored", "how many points",
                      "how many pieces", "how much will it cost",
                      "ticket prices", "teaspoons", "tablespoons",
-                     "packs of gum", "multiple of", "which method"],
+                     "packs of gum", "multiple of", "which method",
+                     "greatest common divisor", "square of", "simplifies to",
+                     "rule for the", "situation can be solved",
+                     "days in a week", "volunteering", "librarian",
+                     "estimate the product", "purchased their lunch",
+                     "inequality"],
         "min_signals": 1,
     },
     # MEDIUM: high school history — very long passages with "This question refers to"
