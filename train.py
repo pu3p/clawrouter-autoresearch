@@ -31,6 +31,10 @@ DOMAIN_KEYWORDS = {
         "organism", "species", "evolution", "ecosystem", "chromosome",
         "algorithm", "data structure", "runtime", "memory", "pointer",
         "network", "protocol", "encryption", "hash", "database",
+        "fission", "fusion", "magnetic", "electric", "sound wave",
+        "light", "energy", "mass", "acceleration", "momentum", "gravity",
+        "temperature", "pressure", "density", "entropy", "thermodynamic",
+        "optics", "lens", "mirror", "refraction", "diffraction",
     ],
     "humanities": [
         "philosophy", "ethics", "moral", "justice", "rights", "virtue",
