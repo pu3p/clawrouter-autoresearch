@@ -551,6 +551,9 @@ def score_request(question, choices):
         # Long humanities questions are likely professional_law (REASONING)
         if tier == "COMPLEX" and domain == "humanities" and len(question) > 300:
             tier = "REASONING"
+    # SIMPLE tier is always STEM (100% in dataset)
+    if tier == "SIMPLE":
+        domain = "stem"
     return {"tier": tier, "domain": domain}
 
 
