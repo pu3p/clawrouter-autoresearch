@@ -137,6 +137,11 @@ def score_complexity(question, choices):
     if question.count(",") >= 3:
         score += 0.05
 
+    # "All/none of the above" in choices → meta-reasoning
+    choices_text = " ".join(c.lower() for c in choices)
+    if "all of the above" in choices_text or "none of the above" in choices_text:
+        score += 0.10
+
     # Reasoning signals
     for pattern in COMPLEXITY_SIGNALS["reasoning"]:
         if re.search(pattern, text):
