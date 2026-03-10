@@ -72,10 +72,10 @@ COMPLEXITY_SIGNALS = {
 
 # Tier thresholds — complexity score mapped to tiers
 TIER_THRESHOLDS = {
-    "SIMPLE": 0.25,
-    "MEDIUM": 0.50,
-    "COMPLEX": 0.75,
-    # anything above 0.75 → REASONING
+    "SIMPLE": 0.15,
+    "MEDIUM": 0.35,
+    "COMPLEX": 0.60,
+    # anything above 0.60 → REASONING
 }
 
 # ---------------------------------------------------------------------------
