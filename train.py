@@ -245,7 +245,15 @@ SUBJECT_PATTERNS = {
     "professional_psychology_strong": {
         "tier": "REASONING",
         "signals": ["pro bono", "dual relationship", "ethical guidelines",
-                     "supervisee", "dissertation"],
+                     "supervisee", "dissertation", "ethics code",
+                     "sexual misconduct", "sexual intimac", "sliding scale",
+                     "jigsaw method", "autokinetic", "sensate focus",
+                     "conduct disorder", "narcissistic personality",
+                     "ego autonomous", "transtheoretical", "levels of processing",
+                     "paired comparison", "racial identity", "multivariate analysis",
+                     "approach-avoidance", "criterion-referenced", "post-hoc test",
+                     "selective serotonin", "antipsychotic", "presbyopia",
+                     "healthy paranoia", "frontal cortex", "hawthorne"],
         "min_signals": 1,
     },
     # COMPLEX: moral_scenarios — all start with this exact phrase
