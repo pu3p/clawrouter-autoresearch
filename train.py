@@ -196,7 +196,7 @@ def classify_domain(question, choices):
     strong_signals = {
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral"],
         "humanities": ["philosophy", "ethics", "constitution", "fallacy", "theology", "legal", "court", "statute"],
-        "social_sciences": ["GDP", "inflation", "election", "psychology", "demographic", "economy", "government", "policy"],
+        "social_sciences": ["GDP", "inflation", "election", "psychology", "demographic"],
         "other": ["diagnosis", "patient", "symptom", "accounting", "revenue", "clinical", "therapy"],
     }
     
