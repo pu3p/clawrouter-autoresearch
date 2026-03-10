@@ -381,7 +381,7 @@ def classify_domain(question, choices):
     # Numeric answers → likely STEM
     numeric_choices = sum(1 for c in choices if re.search(r'\d', c))
     if numeric_choices >= 3:
-        scores["stem"] = scores.get("stem", 0) + 2
+        scores["stem"] = scores.get("stem", 0) + 3
     
     if max(scores.values()) == 0:
         return "other"
