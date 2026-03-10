@@ -184,3 +184,14 @@ f855f8e	0.757022	0.779882	0.734161	keep	more elementary_mathematics signals
 5a5e536	0.759961	0.785761	0.734161	keep	more elementary_mathematics signals
 5b494fc	0.761920	0.790986	0.732854	keep	more elementary_mathematics signals (11 more)
 e36b06a	0.763880	0.794252	0.733508	keep	remaining elementary_mathematics signals
+34dfeec	0.765513	0.796865	0.734161	keep	final elementary_mathematics signals
+5673317	0.762900	0.791639	0.734161	discard	social_sciences MEDIUM 0.40 (worse)
+c4d9c58	0.765513	0.796865	0.734161	keep	accounting/business patterns
+d71046b	0.763880	0.794905	0.732854	discard	solve signal (worse)
+7b6aff5	0.765513	0.796865	0.734161	keep	remove heroin and attribution false positives
+fa4eb00	0.765839	0.797518	0.734161	keep	high_school_ REASONING override
+c5268b8	0.772371	0.797518	0.747224	keep	psychology→social_sciences domain override
+88a48bf	0.780209	0.797518	0.762900	keep	law/accounting/medicine domain overrides
+1e9b44a	0.783475	0.797518	0.769432	keep	moral_scenarios/history domain overrides
+1fcf014	0.784128	0.797518	0.770738	keep	reorder psychology before medicine
+8441d28	0.785108	0.797518	0.772698	keep	remove noisy elementary signals
