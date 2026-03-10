@@ -386,12 +386,12 @@ SUBJECT_PATTERNS = {
     # MEDIUM: high_school_physics
     "high_school_physics": {
         "tier": "MEDIUM",
-        "signals": ["toy car", "light bulb", "resistance",
+        "signals": ["toy car", "light bulb",
                      "balloon", "buoyant force", "propel",
                      "collision", "newton's", "acceleration",
                      "velocity", "kinetic energy", "potential energy",
-                     "circuit", "voltage"],
-        "min_signals": 2,
+                     "circuit", "voltage", "resistance"],
+        "min_signals": 3,
     },
     # MEDIUM: high_school_statistics
     "high_school_statistics": {
