@@ -458,6 +458,36 @@ SUBJECT_PATTERNS = {
                      "think critically", "good reasons"],
         "min_signals": 1,
     },
+    # COMPLEX: conceptual_physics
+    "conceptual_physics": {
+        "tier": "COMPLEX",
+        "signals": ["inclined plane", "normal force", "charged particles",
+                     "radiates", "correspondence principle",
+                     "rolling down", "deflected by",
+                     "magnetic means", "gravitational",
+                     "projectile", "free fall", "wavelength"],
+        "min_signals": 2,
+    },
+    # COMPLEX: astronomy
+    "astronomy": {
+        "tier": "COMPLEX",
+        "signals": ["blackbody", "lunar maria", "venus",
+                     "mercury", "saturn", "jupiter",
+                     "solar system", "light-year", "parsec",
+                     "supernova", "nebula", "galaxy",
+                     "telescope", "red giant"],
+        "min_signals": 2,
+    },
+    # COMPLEX: computer_security
+    "computer_security": {
+        "tier": "COMPLEX",
+        "signals": ["firewall", "intrusion detection",
+                     "buffer overflow", "sql injection",
+                     "cross-site scripting", "authentication",
+                     "cryptographic", "cipher", "malware",
+                     "phishing", "denial of service"],
+        "min_signals": 1,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
@@ -838,6 +868,9 @@ def score_request(question, choices):
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
     if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge"]):
         domain = "other"
+    # Physics/astronomy/computer_security → stem domain
+    if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security"]):
+        domain = "stem"
     return {"tier": tier, "domain": domain}
 
 
