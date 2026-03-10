@@ -473,7 +473,7 @@ def classify_domain(question, choices):
                   "common stock", "older adults",
                   "stethoscope", "venous", "virus", "vaccine", "antibody",
                   "comes to the", "physical exam", "presents to",
-                  "serum", "creatine"],
+                  "serum", "creatine", "history of"],
     }
     
     for domain, keywords in DOMAIN_KEYWORDS.items():
