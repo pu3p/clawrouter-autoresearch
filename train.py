@@ -208,6 +208,10 @@ def classify_domain(question, choices):
     if numeric_choices >= 3:
         scores["stem"] = scores.get("stem", 0) + 2
     
+    # Numbers in question → likely STEM/quantitative
+    if re.search(r'\d+', question):
+        scores["stem"] = scores.get("stem", 0) + 1
+    
     if max(scores.values()) == 0:
         return "other"
     return max(scores, key=scores.get)
