@@ -471,7 +471,9 @@ def classify_domain(question, choices):
                   "physical examination", "emergency department", "vital signs",
                   "blood pressure", "likely diagnosis", "most appropriate",
                   "common stock", "older adults",
-                  "stethoscope", "venous", "virus", "vaccine", "antibody"],
+                  "stethoscope", "venous", "virus", "vaccine", "antibody",
+                  "comes to the", "physical exam", "year-old", "presents to",
+                  "serum", "creatine"],
     }
     
     for domain, keywords in DOMAIN_KEYWORDS.items():
