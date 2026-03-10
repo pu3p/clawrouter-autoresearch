@@ -83,3 +83,18 @@ c25b8a4	0.667538	0.676029	0.659046	keep	more professional_law tier signals
 851cbe0	0.668844	0.678641	0.659046	keep	single-signal law detection
 97e299a	0.669170	0.679295	0.659046	keep	expand accounting tier signals
 c06ee2c	0.669497	0.679948	0.659046	keep	single-signal professional_medicine detection
+aac7732	0.671457	0.683867	0.659046	keep	single-signal professional_psychology detection
+052119a	0.673743	0.683867	0.663619	keep	psychology keywords in social_sciences
+1ff93f3	0.678641	0.683867	0.673416	keep	expand STEM keywords
+6ac3be6	0.680927	0.683867	0.677988	keep	humanities keywords (philosophers, amendments, periods)
+8fd321e	0.684847	0.683867	0.685826	keep	logic/philosophy strong signals
+7e82b2c	0.685500	0.683867	0.687133	keep	accounting/medical keywords in other
+149d9d7	0.690398	0.693664	0.687133	keep	social_sciences COMPLEX→MEDIUM when score<0.44
+f8b767a	0.689419	0.691705	0.687133	discard	social_sciences MEDIUM threshold 0.55 (worse)
+eb0513c	0.687459	0.687786	0.687133	discard	social_sciences MEDIUM threshold 0.48 (worse)
+27d2eb3	0.692031	0.693664	0.690398	keep	security studies strong signals
+3efde7d	0.693011	0.693664	0.692358	keep	security/political keywords in social_sciences
+b9442a7	0.692031	0.694317	0.689745	discard	numeric STEM boost 3 (domain dropped)
+5186443	0.689419	0.694317	0.684520	discard	all-numeric STEM signal (domain dropped)
+e04f1f4	0.693338	0.693664	0.693011	keep	mathematical notation detection for STEM
+f2dce7e	0.689745	0.693664	0.685826	discard	tie-breaking mechanism (domain dropped)
