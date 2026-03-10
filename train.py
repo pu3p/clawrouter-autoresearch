@@ -467,7 +467,8 @@ def classify_domain(question, choices):
                   "marketing", "customer", "brand",
                   "physical examination", "emergency department", "vital signs",
                   "blood pressure", "likely diagnosis", "most appropriate",
-                  "common stock", "older adults"],
+                  "common stock", "older adults",
+                  "stethoscope", "venous", "virus", "vaccine", "antibody"],
     }
     
     for domain, keywords in DOMAIN_KEYWORDS.items():
