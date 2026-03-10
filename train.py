@@ -90,7 +90,7 @@ COMPLEXITY_SIGNALS = {
     ],
     "technical": [
         "define", "theorem", "proof", "derive", "calculate",
-        "formula", "equation", "find", "determine", "identify",
+        "formula", "equation",
     ],
 }
 
