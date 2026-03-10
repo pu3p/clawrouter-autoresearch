@@ -447,9 +447,6 @@ def score_request(question, choices):
         # Long humanities questions are likely professional_law (REASONING)
         if tier == "COMPLEX" and domain == "humanities" and len(question) > 300:
             tier = "REASONING"
-        # Long other questions are likely professional_medicine/accounting (REASONING)
-        if tier == "COMPLEX" and domain == "other" and len(question) > 400:
-            tier = "REASONING"
     return {"tier": tier, "domain": domain}
 
 
