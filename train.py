@@ -383,6 +383,10 @@ def classify_domain(question, choices):
     if numeric_choices >= 3:
         scores["stem"] = scores.get("stem", 0) + 2
     
+    # All-numeric choices (pure math) → strong STEM signal
+    if numeric_choices == len(choices):
+        scores["stem"] = scores.get("stem", 0) + 3
+    
     if max(scores.values()) == 0:
         return "other"
     return max(scores, key=scores.get)
