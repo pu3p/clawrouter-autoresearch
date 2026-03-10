@@ -56,3 +56,30 @@ c9fa6e9	0.606793	0.619203	0.594383	discard	word count 27/14/5 (slight drop)
 7450e87	0.601568	0.608752	0.594383	discard	word count weights increase (worse)
 0a196de	0.607120	0.619856	0.594383	discard	reasoning 0.10 (no change)
 158cc51	0.605487	0.616590	0.594383	discard	technical 0.12 (slight drop)
+d3405af	0.605160	0.619856	0.590464	discard	history strong signal (domain dropped)
+d9ac825	0.605487	0.616590	0.594383	discard	multi-step 0.08 (slight drop)
+9a04975	0.607120	0.619856	0.594383	discard	SIMPLE threshold 0.12 (no change)
+714f06a	0.607120	0.619856	0.594383	discard	MEDIUM threshold 0.32 (no change)
+d0d0720	0.593730	0.593076	0.594383	discard	COMPLEX threshold 0.55 (worse)
+45c64a6	0.575114	0.555846	0.594383	discard	baseline 0.28 (much worse)
+011d6de	0.603201	0.612018	0.594383	discard	baseline 0.31 (worse)
+2264a19	0.630634	0.666884	0.594383	keep	subject-level tier detection
+6de9162	0.634226	0.674069	0.594383	keep	tighten elementary math signals
+3f7bbf5	0.651535	0.674069	0.629001	keep	expand domain keywords (psychology, prehistory, law, marketing)
+50d1cfc	0.653168	0.674069	0.632266	keep	psychology/government strong signals
+e07d272	0.651535	0.674069	0.629001	discard	other strong signals (domain dropped)
+798bd62	0.637165	0.642064	0.632266	discard	simple-starter tier adjustment (tier dropped)
+7aba1ad	0.653168	0.674069	0.632266	discard	more STEM strong signals (no change)
+d492295	0.651535	0.674069	0.629001	discard	4x strong signal weight (domain dropped)
+f483c37	0.653168	0.674069	0.632266	discard	moral_scenarios override (no change)
+c8d55f8	0.655781	0.674069	0.637492	keep	expand other domain keywords
+60fd0e1	0.656760	0.674069	0.639451	keep	prehistory keywords in humanities
+c173b6e	0.658720	0.674069	0.643370	keep	religion strong signals for humanities
+1c3258c	0.661659	0.674069	0.649249	keep	physics keywords in STEM
+2f09b3f	0.662965	0.674069	0.651862	keep	geography strong signals
+27306d9	0.663292	0.674069	0.652515	keep	remove noisy cross-domain keywords
+dd2071f	0.666558	0.674069	0.659046	keep	bigram strong signals (medical, STEM)
+c25b8a4	0.667538	0.676029	0.659046	keep	more professional_law tier signals
+851cbe0	0.668844	0.678641	0.659046	keep	single-signal law detection
+97e299a	0.669170	0.679295	0.659046	keep	expand accounting tier signals
+c06ee2c	0.669497	0.679948	0.659046	keep	single-signal professional_medicine detection
