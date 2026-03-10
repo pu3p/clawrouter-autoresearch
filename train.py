@@ -488,6 +488,26 @@ SUBJECT_PATTERNS = {
                      "phishing", "denial of service"],
         "min_signals": 1,
     },
+    # COMPLEX: business_ethics
+    "business_ethics": {
+        "tier": "COMPLEX",
+        "signals": ["corporate governance", "shareholders",
+                     "executive directors", "stakeholder",
+                     "csr", "sustainability agenda",
+                     "disqualification of directors",
+                     "business ethics", "oecd"],
+        "min_signals": 1,
+    },
+    # COMPLEX: medical_genetics
+    "medical_genetics": {
+        "tier": "COMPLEX",
+        "signals": ["sickle cell", "rflp", "marfan syndrome",
+                     "hardy-weinberg", "autosomal recessive",
+                     "cell lineage", "gametes", "lac operon",
+                     "restriction enzymes", "sticky ends",
+                     "heritability", "base pairs"],
+        "min_signals": 1,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
@@ -866,7 +886,7 @@ def score_request(question, choices):
     if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies"]):
         domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
-    if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge"]):
+    if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge", "business_ethics", "medical_genetics"]):
         domain = "other"
     # Physics/astronomy/computer_security → stem domain
     if _detected_subject and any(s in _detected_subject for s in ["conceptual_physics", "astronomy", "computer_security"]):
