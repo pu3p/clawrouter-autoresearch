@@ -382,6 +382,12 @@ def classify_domain(question, choices):
                                 "molar mass", "free body"]):
         scores["stem"] = scores.get("stem", 0) + 3
     
+    # Formal logic patterns → humanities
+    if any(w in text for w in ["antecedent", "consequent", "symbolization",
+                                "truth table", "valid argument", "sound argument",
+                                "modus ponens", "modus tollens", "disjunction"]):
+        scores["humanities"] = scores.get("humanities", 0) + 3
+    
     # Medical case patterns → other
     if any(w in text for w in ["comes to the office", "brought to the emergency",
                                 "is referred to", "presents to the",
