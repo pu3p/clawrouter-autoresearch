@@ -142,6 +142,11 @@ def score_complexity(question, choices):
     if "all of the above" in choices_text or "none of the above" in choices_text:
         score += 0.10
 
+    # High capitalization ratio → acronyms/technical
+    caps = sum(1 for c in question if c.isupper())
+    if len(question) > 0 and caps / len(question) > 0.05:
+        score += 0.07
+
     # Reasoning signals
     for pattern in COMPLEXITY_SIGNALS["reasoning"]:
         if re.search(pattern, text):
