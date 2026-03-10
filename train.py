@@ -383,6 +383,12 @@ def classify_domain(question, choices):
     if numeric_choices >= 3:
         scores["stem"] = scores.get("stem", 0) + 2
     
+    # Mathematical notation → STEM
+    math_patterns = [r'[=+\-*/^]', r'\d+\.\d+', r'x\^', r'\bx\b.*\by\b', r'\(\d']
+    math_hits = sum(1 for p in math_patterns if re.search(p, question))
+    if math_hits >= 2:
+        scores["stem"] = scores.get("stem", 0) + 2
+    
     if max(scores.values()) == 0:
         return "other"
     return max(scores, key=scores.get)
