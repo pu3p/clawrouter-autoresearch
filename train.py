@@ -184,7 +184,11 @@ SUBJECT_PATTERNS = {
                      "convey", "easement", "tenant", "landlord",
                      "executor", "probate", "bequest",
                      "tort", "injunction", "subpoena", "arraignment",
-                     "guilty", "acquitted", "sentenced"],
+                     "guilty", "acquitted", "sentenced",
+                     "mortgage", "deed", "lien", "foreclosure",
+                     "trespass", "burglary", "robbery", "assault",
+                     "malpractice", "fiduciary", "escrow",
+                     "entered into", "agreed to", "pursuant to"],
         "min_signals": 2,
     },
     # REASONING: professional law (high-confidence single signals)
