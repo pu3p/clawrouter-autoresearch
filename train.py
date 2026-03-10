@@ -567,14 +567,15 @@ SUBJECT_PATTERNS = {
         "tier": "COMPLEX",
         "signals": ["every pleasure is", "of philosophy",
                      "equal concern for", "be chosen.",
-                     "pleasure is good"],
+                     "pleasure is good", "for the survival of each,"],
         "min_signals": 1,
     },
     # COMPLEX: moral_disputes_strong
     "moral_disputes_strong": {
         "tier": "COMPLEX",
         "signals": ["the original position", "should prohibit",
-                     "prohibit things"],
+                     "prohibit things", "b neither a nor",
+                     "neither a nor b"],
         "min_signals": 1,
     },
     # COMPLEX: human_sexuality
@@ -674,6 +675,13 @@ SUBJECT_PATTERNS = {
                      "projectile", "free fall", "wavelength"],
         "min_signals": 2,
     },
+    # COMPLEX: conceptual_physics_strong
+    "conceptual_physics_strong": {
+        "tier": "COMPLEX",
+        "signals": ["none of these neither", "neither of these",
+                     "of the atmosphere"],
+        "min_signals": 1,
+    },
     # COMPLEX: astronomy
     "astronomy": {
         "tier": "COMPLEX",
@@ -683,6 +691,13 @@ SUBJECT_PATTERNS = {
                      "supernova", "nebula", "galaxy",
                      "telescope", "red giant"],
         "min_signals": 2,
+    },
+    # COMPLEX: astronomy_strong
+    "astronomy_strong": {
+        "tier": "COMPLEX",
+        "signals": ["peak emission wavelength", "power emitted is",
+                     "may not be able"],
+        "min_signals": 1,
     },
     # COMPLEX: computer_security
     "computer_security": {
@@ -768,7 +783,8 @@ SUBJECT_PATTERNS = {
         "signals": ["dietary fat", "bioavailability", "basal metabolic rate",
                      "lipoproteins", "vegan diet", "macrobiotic",
                      "anthropometric", "skeletal muscle tissue",
-                     "transamination", "bmr", "nutrient", "nutritional"],
+                     "transamination", "bmr", "nutrient", "nutritional",
+                     "provides less energy than", "hydrophobic core"],
         "min_signals": 1,
     },
     # COMPLEX: virology
@@ -786,6 +802,14 @@ SUBJECT_PATTERNS = {
         "signals": ["muscle fibres", "peak flow", "cushing",
                      "post-operative", "asthma", "blood pressure",
                      "pulse rate", "nursing", "clinical assessment"],
+        "min_signals": 1,
+    },
+    # COMPLEX: clinical_knowledge_strong
+    "clinical_knowledge_strong": {
+        "tier": "COMPLEX",
+        "signals": ["dentures should be", "the pain of",
+                     "released from the muscle.",
+                     "the patient should be"],
         "min_signals": 1,
     },
 }
