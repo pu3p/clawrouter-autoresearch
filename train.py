@@ -140,6 +140,10 @@ def score_complexity(question, choices):
     if question.count(",") >= 3:
         score += 0.05
 
+    # Semicolons → complex sentence structure
+    if ";" in question:
+        score += 0.07
+
     # "All/none of the above" in choices → meta-reasoning
     choices_text = " ".join(c.lower() for c in choices)
     if "all of the above" in choices_text or "none of the above" in choices_text:
