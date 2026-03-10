@@ -106,6 +106,75 @@ TIER_THRESHOLDS = {
 # Scorer (agent modifies this)
 # ---------------------------------------------------------------------------
 
+# Subject-level patterns for direct tier assignment
+SUBJECT_PATTERNS = {
+    # SIMPLE: elementary math — simple arithmetic word problems
+    "elementary_mathematics": {
+        "tier": "SIMPLE",
+        "signals": ["solve for", "simplest form", "what is the value of", "round to the nearest",
+                     "how many", "what was the total", "write.*as a"],
+        "min_signals": 1,
+    },
+    # MEDIUM: high school history — very long passages with "This question refers to"
+    "high_school_history": {
+        "tier": "MEDIUM",
+        "signals": ["this question refers to the following information"],
+        "min_signals": 1,
+    },
+    # REASONING: professional law — legal scenarios with earnest money, warrants, etc.
+    "professional_law": {
+        "tier": "REASONING",
+        "signals": ["court", "defendant", "plaintiff", "statute", "attorney",
+                     "jurisdiction", "verdict", "prosecution", "testimony",
+                     "warrant", "indictment", "felony", "misdemeanor",
+                     "contract", "breach", "damages", "liable", "negligence",
+                     "motion to", "objection", "sustained", "overruled"],
+        "min_signals": 2,
+    },
+    # REASONING: professional medicine
+    "professional_medicine": {
+        "tier": "REASONING",
+        "signals": ["patient", "diagnosis", "clinical", "treatment", "symptom",
+                     "physician", "hospital", "mg", "blood pressure"],
+        "min_signals": 3,
+    },
+    # REASONING: professional accounting
+    "professional_accounting": {
+        "tier": "REASONING",
+        "signals": ["tax", "deduction", "depreciation", "audit", "GAAP",
+                     "financial statement", "balance sheet", "revenue recognition",
+                     "accounts receivable", "accounts payable", "amortization"],
+        "min_signals": 2,
+    },
+    # REASONING: professional psychology
+    "professional_psychology": {
+        "tier": "REASONING",
+        "signals": ["psychologist", "therapist", "counselor", "ethical",
+                     "licensure", "confidentiality", "informed consent",
+                     "DSM", "assessment", "intervention"],
+        "min_signals": 2,
+    },
+    # COMPLEX: moral_scenarios — all start with this exact phrase
+    "moral_scenarios": {
+        "tier": "COMPLEX",
+        "signals": ["for which of these two scenarios does the main character"],
+        "min_signals": 1,
+    },
+}
+
+
+def detect_tier_from_subject(question, choices):
+    """Try to detect the subject and return tier directly. Returns None if uncertain."""
+    text = question.lower()
+    all_text = text + " " + " ".join(c.lower() for c in choices)
+
+    for subj, config in SUBJECT_PATTERNS.items():
+        matches = sum(1 for s in config["signals"] if s in all_text)
+        if matches >= config["min_signals"]:
+            return config["tier"]
+    return None
+
+
 def score_complexity(question, choices):
     """Score question complexity from 0.0 to 1.0."""
     score = 0.3  # baseline: most MMLU questions are COMPLEX
@@ -230,9 +299,12 @@ def complexity_to_tier(score):
 
 def score_request(question, choices):
     """Main scoring function — returns tier and domain predictions."""
-    complexity = score_complexity(question, choices)
     domain = classify_domain(question, choices)
-    tier = complexity_to_tier(complexity)
+    # Try subject-level tier detection first
+    tier = detect_tier_from_subject(question, choices)
+    if tier is None:
+        complexity = score_complexity(question, choices)
+        tier = complexity_to_tier(complexity)
     return {"tier": tier, "domain": domain}
 
 
