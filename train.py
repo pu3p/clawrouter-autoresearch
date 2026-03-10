@@ -147,6 +147,10 @@ def score_complexity(question, choices):
     if len(question) > 0 and caps / len(question) > 0.05:
         score += 0.07
 
+    # Quoted text → requires interpretation
+    if question.count('"') >= 2 or question.count("'") >= 2:
+        score += 0.06
+
     # Reasoning signals
     for pattern in COMPLEXITY_SIGNALS["reasoning"]:
         if re.search(pattern, text):
