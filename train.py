@@ -311,7 +311,10 @@ SUBJECT_PATTERNS = {
 
 
 def detect_tier_from_subject(question, choices):
-    """Try to detect the subject and return tier directly. Returns None if uncertain."""
+    """Try to detect the subject and return tier directly. Returns None if uncertain.
+    Also sets _detected_subject as a side effect for domain adjustment."""
+    global _detected_subject
+    _detected_subject = None
     text = question.lower().replace("\u2019", "'").replace("\u2018", "'")
     all_text = text + " " + " ".join(c.lower() for c in choices)
 
@@ -325,8 +328,11 @@ def detect_tier_from_subject(question, choices):
                                  "legislative oversight"]
                 if any(ind in all_text for ind in hs_indicators):
                     continue
+            _detected_subject = subj
             return config["tier"]
     return None
+
+_detected_subject = None
 
 
 def score_complexity(question, choices):
@@ -598,6 +604,9 @@ def score_request(question, choices):
     # SIMPLE tier is always STEM (100% in dataset)
     if tier == "SIMPLE":
         domain = "stem"
+    # Psychology-detected REASONING → social_sciences domain
+    if tier == "REASONING" and _detected_subject and "psychology" in _detected_subject:
+        domain = "social_sciences"
     return {"tier": tier, "domain": domain}
 
 
