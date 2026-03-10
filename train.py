@@ -205,7 +205,8 @@ SUBJECT_PATTERNS = {
                      "assault", "devised", "heirs", "trespass",
                      "acquitted", "negligent", "heroin", "seaworthy",
                      "stole", "stolen", "standing to sue",
-                     "donated blood", "diamond necklace"],
+                     "donated blood", "diamond necklace",
+                     "sue the federal", "hereby enroll", "exercise facility"],
         "min_signals": 1,
     },
     # REASONING: professional medicine
