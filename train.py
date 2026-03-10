@@ -286,7 +286,9 @@ def classify_domain(question, choices):
     # High-confidence domain indicators (weight 3x)
     strong_signals = {
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
-                 "wavelength", "velocity", "compiler", "eigenvalue"],
+                 "wavelength", "velocity", "compiler", "eigenvalue",
+                 "standard deviation", "speed of", "mass of", "energy of",
+                 "work done", "such that"],
         "humanities": ["philosophy", "ethics", "constitution", "fallacy", "theology",
                        "legal", "court", "statute", "morally wrong", "defendant",
                        "archaeological", "prehistoric", "scripture",
@@ -305,7 +307,10 @@ def classify_domain(question, choices):
                             "city planner", "land use", "spatial"],
         "other": ["diagnosis", "patient", "symptom", "accounting", "revenue",
                   "clinical", "therapy", "prescription", "anatomy", "nutrient",
-                  "marketing", "customer", "brand"],
+                  "marketing", "customer", "brand",
+                  "physical examination", "emergency department", "vital signs",
+                  "blood pressure", "likely diagnosis", "most appropriate",
+                  "common stock", "older adults"],
     }
     
     for domain, keywords in DOMAIN_KEYWORDS.items():
