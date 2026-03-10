@@ -169,7 +169,8 @@ SUBJECT_PATTERNS = {
         "tier": "SIMPLE",
         "signals": ["solve for", "simplest form", "round to the nearest",
                      "what was the total cost", "write.*as a fraction",
-                     "mixed number"],
+                     "mixed number", "solve the equation", "total cost",
+                     "cents per pound", "ice cream"],
         "min_signals": 1,
     },
     # MEDIUM: high school history — very long passages with "This question refers to"
