@@ -67,6 +67,10 @@ DOMAIN_KEYWORDS = {
         "first amendment", "fourth amendment", "due process",
         "colonial", "independence", "founding fathers",
         "reformation", "renaissance", "enlightenment", "crusade",
+        "negligence", "tort", "felony", "misdemeanor", "indictment",
+        "testimony", "witness", "jury", "trial", "appeal",
+        "sovereign", "monarchy", "feudal", "peasant", "noble",
+        "prophet", "apostle", "disciple", "salvation", "sin",
     ],
     "social_sciences": [
         "economy", "GDP", "inflation", "unemployment", "fiscal", "monetary",
