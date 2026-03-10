@@ -289,7 +289,11 @@ def classify_domain(question, choices):
                             "legislative", "oversight", "bipartisan"],
         "other": ["diagnosis", "patient", "symptom", "accounting", "revenue",
                   "clinical", "therapy", "prescription", "anatomy", "nutrient",
-                  "marketing", "customer", "brand"],
+                  "marketing", "customer", "brand",
+                  "dietary", "vitamin", "calorie", "nutrition",
+                  "physician", "surgery", "hospital", "medical",
+                  "audit", "tax", "depreciation", "financial statement",
+                  "management", "business"],
     }
     
     for domain, keywords in DOMAIN_KEYWORDS.items():
