@@ -202,3 +202,7 @@ c5268b8	0.772371	0.797518	0.747224	keep	psychology→social_sciences domain over
 9becf66	0.788047	0.798171	0.777923	keep	fix virology/nutrition false positives
 bf3cd66	0.788047	0.798171	0.777923	keep	expand psychology domain patterns
 a457bce	0.790007	0.800784	0.779229	keep	high_school_psychology subject detection + domain override
+dff5a50	0.791313	0.802743	0.779882	keep	high_school_government subject detection + domain override
+af31616	0.794252	0.808622	0.779882	keep	high_school_macroeconomics subject detection + domain override
+dc9e064	0.795232	0.810581	0.779882	keep	high_school_microeconomics subject detection + domain override
+9fac32d	0.798498	0.816460	0.780536	keep	hs_biology/chemistry/geography/physics/statistics detection
