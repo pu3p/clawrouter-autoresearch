@@ -228,3 +228,9 @@ cdee648	0.832789	0.858263	0.807315	keep	fix public_relations FPs
 e5512d4	0.834422	0.857609	0.811234	keep	us_foreign_policy detection + social_sciences override
 e9b3093	0.835728	0.860222	0.811234	keep	expand hs_biology_strong
 1f7afe9	0.837035	0.860222	0.813847	keep	jurisprudence/human_aging detection + world_religions expansion
+811209e	0.838668	0.860875	0.816460	keep	strong patterns for conceptual_physics/clinical_knowledge/astronomy + expansions
+0f6bf0e	0.842260	0.860875	0.823645	keep	stem domain override for all hs STEM subjects
+42da9c6	0.845199	0.860875	0.829523	keep	expand prehistory_strong
+fa49dab	0.846506	0.860875	0.832136	keep	expand college_medicine/world_religions
+158de69	0.849118	0.862182	0.836055	keep	expand moral_disputes_strong
+a4dec7c	0.849771	0.862835	0.836708	keep	expand hs_geography signals
