@@ -62,6 +62,11 @@ DOMAIN_KEYWORDS = {
         "morally wrong", "utilitarianism", "deontological",
         "inca", "maya", "aztec", "mesopotamia", "pharaoh", "pyramid",
         "excavation", "burial", "pottery", "stone age", "hunter-gatherer",
+        "kant", "aristotle", "plato", "socrates", "hume", "locke",
+        "natural law", "social contract", "categorical imperative",
+        "first amendment", "fourth amendment", "due process",
+        "colonial", "independence", "founding fathers",
+        "reformation", "renaissance", "enlightenment", "crusade",
     ],
     "social_sciences": [
         "economy", "GDP", "inflation", "unemployment", "fiscal", "monetary",
