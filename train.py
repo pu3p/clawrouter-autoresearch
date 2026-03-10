@@ -125,6 +125,10 @@ def score_complexity(question, choices):
     elif avg_choice_len > 25:
         score += 0.05
 
+    # Multiple questions → higher complexity
+    if question.count("?") > 1:
+        score += 0.08
+
     # Reasoning signals
     for pattern in COMPLEXITY_SIGNALS["reasoning"]:
         if re.search(pattern, text):
