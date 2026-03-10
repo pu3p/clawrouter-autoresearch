@@ -196,6 +196,13 @@ SUBJECT_PATTERNS = {
                      "DSM", "assessment", "intervention"],
         "min_signals": 2,
     },
+    # REASONING: professional psychology (high-confidence single signals)
+    "professional_psychology_strong": {
+        "tier": "REASONING",
+        "signals": ["pro bono", "dual relationship", "ethical guidelines",
+                     "supervisee", "dissertation"],
+        "min_signals": 1,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
