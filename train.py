@@ -108,7 +108,7 @@ TIER_THRESHOLDS = {
 
 def score_complexity(question, choices):
     """Score question complexity from 0.0 to 1.0."""
-    score = 0.3  # baseline: most MMLU questions are COMPLEX
+    score = 0.29
     text = question.lower()
     all_text = text + " " + " ".join(c.lower() for c in choices)
 
