@@ -171,6 +171,13 @@ SUBJECT_PATTERNS = {
                      "physician", "hospital", "mg", "blood pressure"],
         "min_signals": 3,
     },
+    # REASONING: professional medicine (high-confidence single signals)
+    "professional_medicine_strong": {
+        "tier": "REASONING",
+        "signals": ["physical examination", "emergency department", "vital signs",
+                     "most appropriate next", "likely diagnosis", "mm hg"],
+        "min_signals": 1,
+    },
     # REASONING: professional accounting
     "professional_accounting": {
         "tier": "REASONING",
