@@ -222,3 +222,9 @@ dbfce87	0.806009	0.820379	0.791639	keep	anatomy/management detection + other ove
 448f497	0.822665	0.850425	0.794905	keep	strong patterns for hs_chem/macro/stats/cs
 b2962d2	0.827237	0.857609	0.796865	keep	strong patterns for hs_micro/gov/physics
 a1f2913	0.829523	0.857609	0.801437	keep	strong patterns for prehistory/philosophy/moral_disputes/human_sexuality
+324b25f	0.830176	0.857609	0.802743	keep	college_cs/college_medicine detection + domain overrides
+2ea3043	0.827564	0.858916	0.796212	keep	add 8 more subject detections
+cdee648	0.832789	0.858263	0.807315	keep	fix public_relations FPs
+e5512d4	0.834422	0.857609	0.811234	keep	us_foreign_policy detection + social_sciences override
+e9b3093	0.835728	0.860222	0.811234	keep	expand hs_biology_strong
+1f7afe9	0.837035	0.860222	0.813847	keep	jurisprudence/human_aging detection + world_religions expansion
