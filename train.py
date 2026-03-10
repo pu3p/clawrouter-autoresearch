@@ -406,6 +406,28 @@ SUBJECT_PATTERNS = {
                      "random sample", "histogram"],
         "min_signals": 2,
     },
+    # COMPLEX: sociology
+    "sociology": {
+        "tier": "COMPLEX",
+        "signals": ["functionalist", "social stratum", "foucault",
+                     "weber", "parsons", "urbanization",
+                     "biopolitics", "anti-psychiatrist",
+                     "social constructivism", "domestic violence",
+                     "social science", "national curriculum",
+                     "disciplinary power", "differential association",
+                     "sick role", "sexual revolution"],
+        "min_signals": 1,
+    },
+    # COMPLEX: security_studies
+    "security_studies": {
+        "tier": "COMPLEX",
+        "signals": ["chemical weapons", "human insecurity",
+                     "postcolonialism", "security studies",
+                     "historical materialism", "greedy state",
+                     "security seeker", "international society",
+                     "nuclear weapon", "arms control"],
+        "min_signals": 1,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
@@ -778,7 +800,7 @@ def score_request(question, choices):
     if _detected_subject and "history" in _detected_subject:
         domain = "humanities"
     # Government/economics-detected → social_sciences domain
-    if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography"]):
+    if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography", "sociology", "security_studies"]):
         domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
     if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge"]):
