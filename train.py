@@ -455,7 +455,10 @@ SUBJECT_PATTERNS = {
                      "world population", "central place theory",
                      "urban", "rural", "migration",
                      "demographic transition", "population density",
-                     "cultural landscape", "spatial"],
+                     "cultural landscape", "spatial",
+                     "stateless nation", "continentality",
+                     "universalizing religion", "land survey",
+                     "immigrant learning"],
         "min_signals": 2,
     },
     # MEDIUM: high_school_computer_science_strong
