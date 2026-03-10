@@ -190,7 +190,7 @@ def classify_domain(question, choices):
         "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral"],
         "humanities": ["philosophy", "ethics", "constitution", "fallacy", "theology"],
         "social_sciences": ["GDP", "inflation", "election", "psychology", "demographic"],
-        "other": ["diagnosis", "patient", "symptom", "accounting", "revenue"],
+        "other": ["diagnosis", "patient", "symptom", "accounting", "revenue", "clinical", "therapy"],
     }
     
     for domain, keywords in DOMAIN_KEYWORDS.items():
