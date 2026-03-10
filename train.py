@@ -393,6 +393,10 @@ def classify_domain(question, choices):
     if math_hits >= 2:
         scores["stem"] = scores.get("stem", 0) + 2
     
+    # True/False statement pairs → likely STEM (abstract algebra pattern)
+    if any("True, True" in c for c in choices) and any("False, False" in c for c in choices):
+        scores["stem"] = scores.get("stem", 0) + 3
+    
     if max(scores.values()) == 0:
         return "other"
     return max(scores, key=scores.get)
