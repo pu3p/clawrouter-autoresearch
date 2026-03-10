@@ -200,7 +200,10 @@ SUBJECT_PATTERNS = {
     "professional_law_strong": {
         "tier": "REASONING",
         "signals": ["defendant", "attorney", "testimony", "felony",
-                     "negligence", "tenant", "prosecution", "plaintiff"],
+                     "negligence", "tenant", "prosecution", "plaintiff",
+                     "convicted", "charged with", "motion to", "admissible",
+                     "assault", "devised", "heirs", "trespass",
+                     "acquitted", "negligent", "heroin", "seaworthy"],
         "min_signals": 1,
     },
     # REASONING: professional medicine
