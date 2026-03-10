@@ -203,7 +203,9 @@ SUBJECT_PATTERNS = {
                      "negligence", "tenant", "prosecution", "plaintiff",
                      "convicted", "charged with", "motion to", "admissible",
                      "assault", "devised", "heirs", "trespass",
-                     "acquitted", "negligent", "heroin", "seaworthy"],
+                     "acquitted", "negligent", "heroin", "seaworthy",
+                     "stole", "stolen", "standing to sue",
+                     "donated blood", "diamond necklace"],
         "min_signals": 1,
     },
     # REASONING: professional medicine
