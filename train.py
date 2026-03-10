@@ -359,6 +359,14 @@ SUBJECT_PATTERNS = {
                      "expansionary", "contractionary"],
         "min_signals": 2,
     },
+    # MEDIUM: high_school_macroeconomics_strong
+    "high_school_macroeconomics_strong": {
+        "tier": "MEDIUM",
+        "signals": ["the equilibrium price", "equilibrium quantity",
+                     "real gdp", "full employment.",
+                     "the price level", "equilibrium price level"],
+        "min_signals": 1,
+    },
     # MEDIUM: high_school_microeconomics
     "high_school_microeconomics": {
         "tier": "MEDIUM",
@@ -404,6 +412,13 @@ SUBJECT_PATTERNS = {
                      "molarity", "titration", "equilibrium constant"],
         "min_signals": 2,
     },
+    # MEDIUM: high_school_chemistry_strong
+    "high_school_chemistry_strong": {
+        "tier": "MEDIUM",
+        "signals": ["is transferred from", "hno2 >", "h2co3 >",
+                     "> h3po4", "the catalyst", "> h2s"],
+        "min_signals": 1,
+    },
     # MEDIUM: high_school_mathematics_strong — unique phrases
     "high_school_mathematics_strong": {
         "tier": "MEDIUM",
@@ -422,6 +437,14 @@ SUBJECT_PATTERNS = {
                      "demographic transition", "population density",
                      "cultural landscape", "spatial"],
         "min_signals": 2,
+    },
+    # MEDIUM: high_school_computer_science_strong
+    "high_school_computer_science_strong": {
+        "tier": "MEDIUM",
+        "signals": ["block-based programming", "string s",
+                     "logic gate", "a computer system",
+                     "machine language,"],
+        "min_signals": 1,
     },
     # MEDIUM: high_school_physics
     "high_school_physics": {
@@ -442,6 +465,13 @@ SUBJECT_PATTERNS = {
                      "correlation", "normal distribution",
                      "random sample", "histogram"],
         "min_signals": 2,
+    },
+    # MEDIUM: high_school_statistics_strong
+    "high_school_statistics_strong": {
+        "tier": "MEDIUM",
+        "signals": ["standard deviation of", "percent confidence",
+                     "above the mean", "a binomial"],
+        "min_signals": 1,
     },
     # COMPLEX: sociology
     "sociology": {
