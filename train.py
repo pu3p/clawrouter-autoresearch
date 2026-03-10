@@ -590,8 +590,7 @@ SUBJECT_PATTERNS = {
     # COMPLEX: public_relations
     "public_relations": {
         "tier": "COMPLEX",
-        "signals": ["of pr", "public relations",
-                     "your supervisor", "to reproduce the"],
+        "signals": ["public relations", "your supervisor"],
         "min_signals": 1,
     },
     # COMPLEX: international_law
