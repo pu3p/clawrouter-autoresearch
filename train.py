@@ -44,6 +44,10 @@ DOMAIN_KEYWORDS = {
         "ethical", "morality", "duty", "obligation", "conscience",
         "philosophical", "epistemology", "metaphysics", "ontology",
         "religious", "scripture", "doctrine", "spiritual", "divine",
+        "archaeological", "artifact", "civilization", "tribe", "homo",
+        "prehistoric", "neolithic", "paleolithic", "bronze age", "iron age",
+        "defendant", "prosecution", "attorney", "jurisdiction",
+        "morally wrong", "scenario", "utilitarianism", "deontological",
     ],
     "social_sciences": [
         "economy", "GDP", "inflation", "unemployment", "fiscal", "monetary",
@@ -60,6 +64,12 @@ DOMAIN_KEYWORDS = {
         "sociological", "demographic", "ethnicity", "inequality", "migration",
         "geographic", "continent", "hemisphere", "latitude", "longitude",
         "foreign policy", "treaty", "alliance", "sovereignty", "nation",
+        "psychologist", "reinforcement", "conditioning", "stimulus",
+        "researcher", "experiment", "therapy", "client", "counselor",
+        "emotions", "punishment", "reward", "learning", "memory",
+        "aggregate demand", "aggregate supply", "money supply", "price level",
+        "demand curve", "supply curve", "marginal cost", "equilibrium",
+        "monopoly", "oligopoly", "elasticity", "perfectly competitive",
     ],
     "other": [
         "patient", "diagnosis", "treatment", "symptom", "disease", "clinical",
@@ -264,10 +274,17 @@ def classify_domain(question, choices):
     
     # High-confidence domain indicators (weight 3x)
     strong_signals = {
-        "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral"],
-        "humanities": ["philosophy", "ethics", "constitution", "fallacy", "theology", "legal", "court", "statute"],
-        "social_sciences": ["GDP", "inflation", "election", "psychology", "demographic"],
-        "other": ["diagnosis", "patient", "symptom", "accounting", "revenue", "clinical", "therapy"],
+        "stem": ["theorem", "equation", "algorithm", "molecule", "electron", "integral",
+                 "wavelength", "velocity", "compiler", "eigenvalue"],
+        "humanities": ["philosophy", "ethics", "constitution", "fallacy", "theology",
+                       "legal", "court", "statute", "morally wrong", "defendant",
+                       "archaeological", "prehistoric", "scripture"],
+        "social_sciences": ["GDP", "inflation", "election", "psychologist", "demographic",
+                            "psychology", "reinforcement", "aggregate demand",
+                            "money supply", "demand curve", "conditioning"],
+        "other": ["diagnosis", "patient", "symptom", "accounting", "revenue",
+                  "clinical", "therapy", "prescription", "anatomy", "nutrient",
+                  "marketing", "customer", "brand"],
     }
     
     for domain, keywords in DOMAIN_KEYWORDS.items():
