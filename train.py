@@ -394,6 +394,15 @@ SUBJECT_PATTERNS = {
                      "molarity", "titration", "equilibrium constant"],
         "min_signals": 2,
     },
+    # MEDIUM: high_school_mathematics_strong — unique phrases
+    "high_school_mathematics_strong": {
+        "tier": "MEDIUM",
+        "signals": ["(x, y)", "the domain of", "have an inverse",
+                     "express your answer", "the graph of",
+                     "find the sum", "domain of $f$",
+                     "all real", "where $a$"],
+        "min_signals": 1,
+    },
     # MEDIUM: high_school_geography
     "high_school_geography": {
         "tier": "MEDIUM",
