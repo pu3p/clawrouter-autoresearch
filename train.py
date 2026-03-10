@@ -242,7 +242,10 @@ SUBJECT_PATTERNS = {
                      "material misstatement", "defined benefit", "convertible bond",
                      "overfunded", "nongovernmental", "equity method",
                      "accrual", "conversion ratio", "par value",
-                     "financial statements", "income statement", "classified statement"],
+                     "financial statements", "income statement", "classified statement",
+                     "divorce settlement", "risk-averse", "face value",
+                     "cost of debt", "uncollectible", "ordinary income",
+                     "levied", "coupon", "property tax"],
         "min_signals": 1,
     },
     # REASONING: professional psychology
