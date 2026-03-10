@@ -173,7 +173,7 @@ def score_complexity(question, choices):
     # Technical signals
     for pattern in COMPLEXITY_SIGNALS["technical"]:
         if re.search(pattern, all_text):
-            score += 0.1
+            score += 0.12
             break
 
     # Statement-based questions (often complex)
