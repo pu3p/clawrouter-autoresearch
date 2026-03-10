@@ -470,7 +470,9 @@ def classify_domain(question, choices):
     # Medical case patterns → other
     if any(w in text for w in ["comes to the office", "brought to the emergency",
                                 "is referred to", "presents to the",
-                                "history of present illness", "past medical history"]):
+                                "history of present illness", "past medical history",
+                                "post-operative", "alzheimer", "cancer cells",
+                                "gait", "internal bleeding"]):
         scores["other"] = scores.get("other", 0) + 3
     
     # Accounting/business patterns → other
