@@ -481,7 +481,7 @@ def classify_domain(question, choices):
     ultra_strong = {
         "stem": ["wavelength", "binary", "orbit", "proton", "acceleration", "subgroup", "python", "gradient",
                  "equation", "matrix", "software", "molecule", "probability", "magnetic",
-                 "nucleus", "polynomial", "vector", "organism", "photosynthesis", "dna"],
+                 "nucleus", "polynomial", "vector"],
         "humanities": ["statute", "fallacy", "premise", "ritual", "plaintiff", "morality", "doctrine",
                        "defendant", "prosecution", "attorney", "jurisdiction", "morally wrong",
                        "negligence", "felony", "testimony", "witness",
