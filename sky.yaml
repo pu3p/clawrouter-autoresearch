@@ -1,0 +1,33 @@
+resources:
+  cloud: aws
+  accelerators: T4:1
+  disk_size: 100
+  use_spot: true
+
+workdir: .
+
+setup: |
+  set -e
+
+  # Python env
+  conda activate base
+
+  # PyTorch + transformers for DeBERTa fine-tuning
+  pip install torch transformers datasets accelerate scikit-learn huggingface_hub
+
+  # Install kiro-cli
+  curl -fsSL https://kiro.dev/install.sh | bash
+  echo 'export PATH="$HOME/.kiro/bin:$PATH"' >> ~/.bashrc
+  export PATH="$HOME/.kiro/bin:$PATH"
+
+  # Create directories
+  mkdir -p ~/simply/scripts ~/simply/results
+
+  echo ""
+  echo "============================================"
+  echo "  Setup complete. Now run:"
+  echo "    sky ssh simply-dev"
+  echo "    kiro-cli login --use-device-flow"
+  echo "  Then exit and run:"
+  echo "    sky exec simply-dev run.sh"
+  echo "============================================"
