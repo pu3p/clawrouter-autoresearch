@@ -111,8 +111,9 @@ SUBJECT_PATTERNS = {
     # SIMPLE: elementary math — simple arithmetic word problems
     "elementary_mathematics": {
         "tier": "SIMPLE",
-        "signals": ["solve for", "simplest form", "what is the value of", "round to the nearest",
-                     "how many", "what was the total", "write.*as a"],
+        "signals": ["solve for", "simplest form", "round to the nearest",
+                     "what was the total cost", "write.*as a fraction",
+                     "mixed number"],
         "min_signals": 1,
     },
     # MEDIUM: high school history — very long passages with "This question refers to"
