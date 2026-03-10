@@ -353,6 +353,56 @@ SUBJECT_PATTERNS = {
                      "utility-maximizing", "demand for"],
         "min_signals": 2,
     },
+    # MEDIUM: high_school_biology
+    "high_school_biology": {
+        "tier": "MEDIUM",
+        "signals": ["darwin", "natural selection", "elodea",
+                     "small intestine", "photosynthesis", "mitosis",
+                     "meiosis", "dna replication", "allele",
+                     "phenotype", "genotype", "ecosystem",
+                     "food chain", "cell membrane", "ribosome"],
+        "min_signals": 2,
+    },
+    # MEDIUM: high_school_chemistry
+    "high_school_chemistry": {
+        "tier": "MEDIUM",
+        "signals": ["lewis structure", "ground state", "bond strength",
+                     "electron configuration", "homogeneous",
+                     "heterogeneous", "molar mass", "oxidation",
+                     "reduction", "periodic table", "valence",
+                     "molarity", "titration", "equilibrium constant"],
+        "min_signals": 2,
+    },
+    # MEDIUM: high_school_geography
+    "high_school_geography": {
+        "tier": "MEDIUM",
+        "signals": ["federal state", "city planners", "land use",
+                     "world population", "central place theory",
+                     "urban", "rural", "migration",
+                     "demographic transition", "population density",
+                     "cultural landscape", "spatial"],
+        "min_signals": 2,
+    },
+    # MEDIUM: high_school_physics
+    "high_school_physics": {
+        "tier": "MEDIUM",
+        "signals": ["toy car", "light bulb", "resistance",
+                     "balloon", "buoyant force", "propel",
+                     "collision", "newton's", "acceleration",
+                     "velocity", "kinetic energy", "potential energy",
+                     "circuit", "voltage"],
+        "min_signals": 2,
+    },
+    # MEDIUM: high_school_statistics
+    "high_school_statistics": {
+        "tier": "MEDIUM",
+        "signals": ["standard deviation", "binomial", "sample survey",
+                     "bias", "continuous data", "confidence interval",
+                     "null hypothesis", "p-value", "regression",
+                     "correlation", "normal distribution",
+                     "random sample", "histogram"],
+        "min_signals": 2,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
@@ -725,7 +775,7 @@ def score_request(question, choices):
     if _detected_subject and "history" in _detected_subject:
         domain = "humanities"
     # Government/economics-detected → social_sciences domain
-    if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics"]):
+    if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics", "microeconomics", "high_school_geography"]):
         domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
     if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge"]):
