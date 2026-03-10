@@ -415,7 +415,11 @@ SUBJECT_PATTERNS = {
                      "secretion will", "two nucleotides",
                      "descent with modification", "hardy-weinberg equilibrium",
                      "while prokaryotes", "glucose levels will",
-                     "gene alleles"],
+                     "gene alleles",
+                     "there are differences in", "among the species.",
+                     "the cell in metaphase", "will stop and",
+                     "hydrogen bonding", "skeletal structures",
+                     "forelimbs", "reptile eggs"],
         "min_signals": 1,
     },
     # MEDIUM: high_school_chemistry
