@@ -174,9 +174,11 @@ SUBJECT_PATTERNS = {
     # REASONING: professional accounting
     "professional_accounting": {
         "tier": "REASONING",
-        "signals": ["tax", "deduction", "depreciation", "audit", "GAAP",
+        "signals": ["tax", "deduction", "depreciation", "audit", "gaap",
                      "financial statement", "balance sheet", "revenue recognition",
-                     "accounts receivable", "accounts payable", "amortization"],
+                     "accounts receivable", "accounts payable", "amortization",
+                     "taxable", "gross income", "net income", "cash flow",
+                     "inventory", "goodwill"],
         "min_signals": 2,
     },
     # REASONING: professional psychology
