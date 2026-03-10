@@ -123,10 +123,10 @@ def score_complexity(question, choices):
 
     # Choice complexity
     avg_choice_len = sum(len(c) for c in choices) / len(choices)
-    if avg_choice_len > 50:
-        score += 0.1
-    elif avg_choice_len > 25:
-        score += 0.05
+    if avg_choice_len > 60:
+        score += 0.12
+    elif avg_choice_len > 30:
+        score += 0.06
 
     # Multiple questions → higher complexity
     if question.count("?") > 1:
