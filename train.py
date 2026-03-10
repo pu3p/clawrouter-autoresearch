@@ -147,7 +147,7 @@ def score_complexity(question, choices):
     # "All/none of the above" in choices → meta-reasoning
     choices_text = " ".join(c.lower() for c in choices)
     if "all of the above" in choices_text or "none of the above" in choices_text:
-        score += 0.12
+        score += 0.10
 
     # High capitalization ratio → acronyms/technical
     caps = sum(1 for c in question if c.isupper())
