@@ -328,6 +328,19 @@ SUBJECT_PATTERNS = {
                      "separation of church", "majority party"],
         "min_signals": 2,
     },
+    # MEDIUM: high_school_macroeconomics
+    "high_school_macroeconomics": {
+        "tier": "MEDIUM",
+        "signals": ["money supply", "aggregate demand", "aggregate supply",
+                     "fiscal policy", "spending multiplier",
+                     "equilibrium price level", "full employment",
+                     "gross domestic product", "gdp", "stagflation",
+                     "circular flow", "marginal propensity to consume",
+                     "current account", "reserve requirement",
+                     "open market operation", "real interest rate",
+                     "expansionary", "contractionary"],
+        "min_signals": 2,
+    },
     # COMPLEX: moral_scenarios — all start with this exact phrase
     "moral_scenarios": {
         "tier": "COMPLEX",
@@ -699,8 +712,8 @@ def score_request(question, choices):
     # History-detected → humanities domain
     if _detected_subject and "history" in _detected_subject:
         domain = "humanities"
-    # Government-detected → social_sciences domain
-    if _detected_subject and "government" in _detected_subject:
+    # Government/economics-detected → social_sciences domain
+    if _detected_subject and any(s in _detected_subject for s in ["government", "macroeconomics"]):
         domain = "social_sciences"
     # Marketing/management/business_ethics/nutrition/clinical_knowledge/virology → other domain
     if _detected_subject and any(s in _detected_subject for s in ["marketing", "nutrition", "virology", "clinical_knowledge"]):
