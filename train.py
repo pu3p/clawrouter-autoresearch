@@ -83,7 +83,6 @@ COMPLEXITY_SIGNALS = {
         "analyze", "evaluate", "compare", "contrast", "explain why",
         "what would happen if", "implications", "consequences",
         "which of the following best", "most likely", "least likely",
-        "best describes", "most accurate", "most appropriate",
     ],
     "multi_step": [
         "first", "then", "finally", "step", "process", "sequence",
