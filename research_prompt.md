@@ -76,8 +76,13 @@ Write a report to /workspace/results/classifier_report.md with:
 - Recommendations for deployment
 
 ## Important notes
-- This uses PyTorch/transformers, NOT Simply/JAX. Simply is installed but not used for this task.
+- This uses PyTorch/transformers, NOT Simply/JAX.
 - All scripts should be runnable standalone: `python scripts/prepare_mmlu.py`, etc.
 - Use the GPU — ensure torch.cuda.is_available() and move model/data to GPU.
 - Save the final model in HuggingFace format so it can be loaded with from_pretrained().
-- **After completing each step**, commit results by running: `bash ~/sky_workdir/commit_results.sh "step N: description"`
+- Do NOT commit large binary files (.pt, .bin, .safetensors, .arrow) — they are gitignored.
+- **CRITICAL: After completing each step**, commit to git:
+  ```
+  cd ~/sky_workdir && cp -r /workspace/simply/scripts/* scripts/ 2>/dev/null; cp /workspace/results/*.json /workspace/results/*.md results/ 2>/dev/null; git add -A && git commit -m "step N: description" && git push clawrouter mar10-ec2
+  ```
+- Steps 1-2 are already done. Data is at /workspace/results/mmlu_processed/. Domain labels at /workspace/results/domain_labels.json. Resume from Step 3.
