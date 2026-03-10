@@ -171,7 +171,7 @@ def score_complexity(question, choices):
 
     # Statement-based questions (often complex)
     if "statement 1" in text or "statement 2" in text:
-        score += 0.20
+        score += 0.15
 
     # Negation complexity
     if any(w in text for w in ["not", "except", "false", "incorrect"]):
